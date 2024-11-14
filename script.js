@@ -34,7 +34,9 @@ document.getElementById('contactForm').addEventListener('submit', function(event
     .then(response => response.json())
     .then(data => {
         if (data.status === "success") {
-            alert("Form submitted successfully!");
+            alert("Form submitted successfully! We'll get back to you as soon as possible.");
+            const successMessage = document.getElementById('successMessage');
+            successMessage.style.display = 'block';
         }
     })
     .catch(error => console.error('Error:', error));

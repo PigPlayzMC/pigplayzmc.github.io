@@ -6,12 +6,27 @@
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
+/* Hidden class to initially hide the success message */
+.hidden {
+    display: none;
+}
+
+#successMessage {
+    font-family: sans-serif;
+    background-color: #5bae53;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
 /* Banner Styling */
 .banner {
     background-color: #000000; /* Choose a background color */
     color: white; /* Text color */
-    text-align: left; /* Center the text */
-    padding: 20px 20px 20px; /* Space inside the banner */
+    text-align: center; /* Center the text */
+    padding: 20px 20px 25px; /* Space inside the banner */
     position: fixed; /* Keep it at the top */
     width: 100%; /* Full-width */
     top: 0; /* Align it at the top */
@@ -22,8 +37,9 @@
     color: white;
     text-align: center;
     position: fixed;
-    left: 7%;
+    left: 42%;
     z-index: 1001;
+    margin-bottom: 20px;
 }
 
 /* Push main content below the banner */
@@ -33,10 +49,10 @@
 }
 
 .form-container {
-    margin-top: 10vh;
+    margin-top: 12vh;
     max-width: fit-content;
     margin-left: auto;
-    margin-right: 0;
+    margin-right: auto;
 
     background-color: #fff;
     padding: 20px 30px;
@@ -49,6 +65,11 @@
 form h2 {
     margin-bottom: 15px;
     color: #000000;
+    text-align: center;
+}
+
+form p {
+    margin-bottom: 10px;
     text-align: center;
 }
 
@@ -93,4 +114,10 @@ button {
 
 button:hover {
     background-color: #3c3c3c;
+}
+
+.trustpilot-widget {
+    float: right;
+    margin-left: 20px; /* Optional: adds spacing to the left */
+    text-align: center;
 }
