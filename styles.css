@@ -23,11 +23,6 @@
 
 /* Banner Styling */
 .banner {
-    background-image: url('Logo-04Trans_NoText.png'); /* Replace with your image path */
-    background-size: 10vh; /* Cover the full banner area */
-    background-position: center; /* Center the image */
-    /* STILL BROKEN*/
-
     background-color: #000000; /* Choose a background color */
     color: white; /* Text color */
     text-align: center; /* Center the text */
