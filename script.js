@@ -17,13 +17,6 @@ document.getElementById('contactForm').addEventListener('submit', function(event
         return;
     }
 
-    // Validate Phone
-    const phone = document.getElementById('phone').value.trim();
-    if (!/^\d{10}$/.test(phone)) {
-        alert("Please enter a valid 10-digit phone number.");
-        return;
-    }
-
     // Validate Message
     const message = document.getElementById('message').value.trim();
     if (message === "") {
@@ -31,6 +24,18 @@ document.getElementById('contactForm').addEventListener('submit', function(event
         return;
     }
 
-    // If all validations pass, submit the form (or you could add custom code here to process it)
-    alert("Form submitted successfully!");
+    // If all validations pass, submit the form
+    // Submit the form
+    const formData = new FormData(this);
+    fetch('https://script.google.com/macros/s/AKfycbyEddSB3dwsTnP_Fu9MCsx3J9Fx6DlHOKfeJS4ji_rSqmcmf8bYt5f4o4HeHTv2g9EL/exec', {
+        method: 'POST',
+        body: formData,
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.status === "success") {
+            alert("Form submitted successfully!");
+        }
+    })
+    .catch(error => console.error('Error:', error));
 });
