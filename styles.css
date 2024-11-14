@@ -8,7 +8,7 @@
 
 /* Hidden class to initially hide the success message */
 .hidden {
-    /*display: none;*/
+    display: none;
 }
 
 #successMessage {
