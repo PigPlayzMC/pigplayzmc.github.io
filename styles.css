@@ -18,6 +18,7 @@
     border-radius: 8px;
     text-align: center;
     color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 /* Banner Styling */
@@ -25,7 +26,7 @@
     background-color: #000000; /* Choose a background color */
     color: white; /* Text color */
     text-align: left; /* Center the text */
-    padding: 20px 20px 20px; /* Space inside the banner */
+    padding: 20px 20px 25px; /* Space inside the banner */
     position: fixed; /* Keep it at the top */
     width: 100%; /* Full-width */
     top: 0; /* Align it at the top */
@@ -38,6 +39,7 @@
     position: fixed;
     left: 7%;
     z-index: 1001;
+    margin-bottom: 20px;
 }
 
 /* Push main content below the banner */
@@ -112,4 +114,10 @@ button {
 
 button:hover {
     background-color: #3c3c3c;
+}
+
+.trustpilot {
+    position: absolute;
+    left: vw;
+    text-align: right;
 }
