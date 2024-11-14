@@ -10,11 +10,29 @@
     <!-- Banner Section -->
     <div class="banner">
         <h1>WESTCOUNTRY REPAIRS</h1>
-        <p>Your tagline or call-to-action text goes here.</p>
+        <div class="tagline"> 
+            <p>Phones | Computers | Tablets</p>
+        </div>
     </div>
     
-    <!-- Main Content -->
-    <div class="content">
+    <!-- Input Form-->
+    <div class="form-container">
+        <form id="contactForm">
+            <h2>Book a repair appointment today!</h2>
+            
+            <label for="name">Name: </label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email Address: </label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message: </label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+
+            <button type="submit">Submit!</button>
+        </form>
     </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
