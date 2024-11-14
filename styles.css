@@ -1,0 +1,23 @@
+/* Reset default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Banner Styling */
+.banner {
+    background-color: #4CAF50; /* Choose a background color */
+    color: white; /* Text color */
+    text-align: center; /* Center the text */
+    padding: 20px; /* Space inside the banner */
+    position: fixed; /* Keep it at the top */
+    width: 100%; /* Full-width */
+    top: 0; /* Align it at the top */
+    z-index: 1000; /* Ensure it's on top of other elements */
+}
+
+/* Push main content below the banner */
+.content {
+    margin-top: 80px; /* Adjust based on the height of the banner */
+}
