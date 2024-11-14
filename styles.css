@@ -23,6 +23,11 @@
 
 /* Banner Styling */
 .banner {
+    background-image: url('Logo-04Trans_NoText.png'); /* Replace with your image path */
+    background-size: 10vh; /* Cover the full banner area */
+    background-position: center; /* Center the image */
+    /* STILL BROKEN*/
+
     background-color: #000000; /* Choose a background color */
     color: white; /* Text color */
     text-align: center; /* Center the text */
@@ -31,6 +36,13 @@
     width: 100%; /* Full-width */
     top: 0; /* Align it at the top */
     z-index: 1000; /* Ensure it's on top of other elements */
+}
+
+.top-banner {
+    width: 10%; /* Makes the image full width */
+    height: auto; /* Maintains the image's aspect ratio */
+    display: block; /* Removes any extra spacing around the image */
+    margin: 0; /* Removes any default margin */
 }
 
 .tagline {
