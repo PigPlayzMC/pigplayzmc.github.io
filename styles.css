@@ -21,11 +21,19 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.logo-image {
+.header-image {
     position: fixed;
     scale: 20%;
-    left: -75vw;
-    top: -84vh;
+    left: 0;
+    top: 0;
+    z-index: 1001;
+}
+
+.header-image-2 {
+    position: fixed;
+    /* Can't have scale twice! */
+    left: 0;
+    top: 0;
     z-index: 1001;
 }
 
