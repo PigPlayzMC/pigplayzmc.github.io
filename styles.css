@@ -32,8 +32,8 @@
 .header-image-2 {
     position: fixed;
     /* Can't have scale twice! */
-    left: 0;
-    top: 0;
+    left: 5vw;
+    top: 8vh;
     z-index: 1001;
 }
 
