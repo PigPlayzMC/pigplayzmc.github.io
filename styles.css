@@ -21,6 +21,22 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+.header-image {
+    position: fixed;
+    scale: 20%;
+    left: 0;
+    top: 0;
+    z-index: 1001;
+}
+
+.header-image-2 {
+    position: fixed;
+    /* Can't have scale twice! */
+    left: 5vw;
+    top: 8vh;
+    z-index: 1001;
+}
+
 /* Banner Styling */
 .banner {
     background-color: #000000; /* Choose a background color */
@@ -31,6 +47,13 @@
     width: 100%; /* Full-width */
     top: 0; /* Align it at the top */
     z-index: 1000; /* Ensure it's on top of other elements */
+}
+
+.top-banner {
+    width: 10%; /* Makes the image full width */
+    height: auto; /* Maintains the image's aspect ratio */
+    display: block; /* Removes any extra spacing around the image */
+    margin: 0; /* Removes any default margin */
 }
 
 .tagline {
