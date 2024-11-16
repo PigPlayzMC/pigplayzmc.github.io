@@ -11,6 +11,13 @@
     display: none;
 }
 
+.rat {
+    position: absolute;
+    left: -60vw;
+    top: -210vh;
+    scale: 20%;
+}
+
 #successMessage {
     font-family: sans-serif;
     background-color: #5bae53;
