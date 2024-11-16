@@ -76,6 +76,10 @@
     text-align: left;
     padding-left: 25vw;
     font-family: sans-serif;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    margin: 20;
+    max-width: 75vw;
 }
 
 .form-container {
