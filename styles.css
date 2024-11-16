@@ -27,6 +27,7 @@
     left: 0;
     top: 0;
     z-index: 1001;
+    margin: 0;
 }
 
 .header-image-2 {
@@ -35,6 +36,7 @@
     left: 5vw;
     top: 8vh;
     z-index: 1001;
+    margin: 0;
 }
 
 /* Banner Styling */
@@ -42,7 +44,7 @@
     background-color: #000000; /* Choose a background color */
     color: white; /* Text color */
     text-align: center; /* Center the text */
-    padding: 20px 20px 25px; /* Space inside the banner */
+    padding: 2vh 20px; /* Space inside the banner */
     position: fixed; /* Keep it at the top */
     width: 100%; /* Full-width */
     top: 0; /* Align it at the top */
@@ -54,16 +56,17 @@
     height: auto; /* Maintains the image's aspect ratio */
     display: block; /* Removes any extra spacing around the image */
     margin: 0; /* Removes any default margin */
+    padding-bottom: 0;
 }
 
 .tagline {
     color: white;
+    margin: 0 auto;
     text-align: center;
     position: fixed;
-    left: auto;
-    right: auto;
+    left: 42vw;
     z-index: 1001;
-    margin-bottom: 20px;
+    margin-bottom: 2vh;
 }
 
 /* Push main content below the banner */
