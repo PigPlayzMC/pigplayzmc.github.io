@@ -171,3 +171,7 @@ button:hover {
 .hidden-text {
     display: none;
 }
+
+.clickable-header {
+    cursor: pointer;
+}

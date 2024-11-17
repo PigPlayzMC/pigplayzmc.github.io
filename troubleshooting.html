@@ -35,17 +35,16 @@
         </div>
 
     <div class="content">
-            <!-- Replace this button in final build -->
-             <button onclick="toggleParagraph()">Hide/Show Paragraph</button>
-
-
         <!-- Written on small screen, apologies for potential readability issues :I -->
         <p>Welcome to the troubleshooting page. If you have a 
             software issue, this is the place to be! By following 
             these instructions, you have the best chance of 
-            sorting the problem by yourself. <br><br>
-
-            <h1><b>[1]</b> Restart your computer</h1><br>
+            sorting the problem by yourself.<br><br>
+            <i>Already done a step? Just click on the title to hide it. Need it back? 
+            Click again!</i><br>
+            <div class="clickable-header">
+                <h1 onclick="toggleParagraph()"><b>[1]</b> Restart your computer</h1>
+            </div>
             <div id="restart-computer">
                 This might seem obvious but if you're having an problem 
                 with your computer, phone, or other device, this is a 
