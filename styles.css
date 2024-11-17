@@ -163,3 +163,12 @@ button:hover {
     margin-left: 20px; /* Optional: adds spacing to the left */
     text-align: center;
 }
+
+#restart-computer {
+    transition: opacity 0.3s ease;
+}
+
+.hidden-text {
+    opacity: 0;
+    visibility: hidden;
+}
