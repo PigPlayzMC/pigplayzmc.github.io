@@ -175,3 +175,7 @@ button:hover {
 .clickable-header {
     cursor: pointer;
 }
+
+#reinstall-software {
+    transition: opacity 0.3s ease;
+}
