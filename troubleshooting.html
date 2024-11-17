@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="favicon.png" type="image/png">
 
     <!-- Top Image -->
     <div class="header-image">
@@ -97,14 +98,31 @@
                 the screen goes black. Certain devices require your to hold both the 
                 power/side button and the volume down button.<br><br>
             </div>
+
             <div class="clickable-header">
-                <h1 onclick="toggleParagraph('reinstall-software')"><b>[2]</b> Reinstall the software</h1>
+                <h1 onclick="toggleParagraph('update-everything')"><b>[2]</b> Update <strong>everything</strong></h1>
+            </div>
+            <div id="update-everything" class="hidden-text">
+                Seriously, we mean everything. <strong>EVERYTHING</strong>. Operating 
+                system, software, drivers. For information on how to update these things 
+                search for "<i>your-device</i> update system/software/drivers" and follow 
+                the instructions provided.<br><br>
+            </div>
+
+
+            <div class="clickable-header">
+                <h1 onclick="toggleParagraph('reinstall-software')"><b>[3]</b> Reinstall the software</h1>
             </div>
             <div id="reinstall-software" class="hidden-text">
-                Another step, should a restart fail to fix your problem, is reinstalling 
+                Another step, should a restart or update fail to fix your problem, is reinstalling 
                 whichever software you're having issues with. Of course, if your 
-                operating system is the problem, this won't help but 
+                operating system is the problem, this won't help but it's a decent 
+                option for simply issues. Certain software comes with a dedicated 
+                uninstall option so, if your uncertain, search for "<i>your-software</i> 
+                uninstall" and follow those instructions.<br>
             </div>
+            <br>Still broken? Luckily for you, that's where we come in! Click 
+            <a href="index.html">here</a> to go to our home page and schedule a repair.
         </p>
     </div>
 
