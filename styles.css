@@ -11,6 +11,13 @@
     display: none;
 }
 
+.rat {
+    position: absolute;
+    left: -60vw;
+    top: -210vh;
+    scale: 20%;
+}
+
 #successMessage {
     font-family: sans-serif;
     background-color: #5bae53;
@@ -72,7 +79,14 @@
 /* Push main content below the banner */
 .content {
     margin-top: 15vh; /* Adjust based on the height of the banner */
-    background-color: #000000;
+    background-color: #ffffff;
+    text-align: left;
+    padding-left: 25vw;
+    font-family: sans-serif;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    margin: 20;
+    max-width: 75vw;
 }
 
 .form-container {
@@ -105,6 +119,7 @@ label {
     margin-bottom: 5px;
     color: #000000;
     font-weight: bold;
+    padding-left: 1.5vw;
 }
 
 input[type="text"],
@@ -147,4 +162,20 @@ button:hover {
     float: right;
     margin-left: 20px; /* Optional: adds spacing to the left */
     text-align: center;
+}
+
+#restart-computer {
+    transition: opacity 0.3s ease;
+}
+
+.hidden-text {
+    display: none;
+}
+
+.clickable-header {
+    cursor: pointer;
+}
+
+#reinstall-software {
+    transition: opacity 0.3s ease;
 }
