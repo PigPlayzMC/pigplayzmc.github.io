@@ -53,12 +53,17 @@
 }
 
 .menu li a {
+    display: block;
+    width: 100%;
+    padding: 10px;
     text-decoration: none;
     color: white;
+    background-color: transparent;
 }
 
 .menu li a:hover {
     color: #ddd;
+    background-color: #555;
 }
 
 .rat {
