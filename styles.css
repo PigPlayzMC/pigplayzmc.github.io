@@ -13,7 +13,7 @@
 
 .navigation-dropdown {
     color: white;
-    position: absolute;
+    position: fixed;
     top: 1vh;
     right: 10px;
     display: flex;
@@ -31,7 +31,7 @@
 }
 
 .menu {
-    position: absolute;
+    position: fixed;
     top: 15vh;
     right: 0;
     width: 200px;
