@@ -3,7 +3,8 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    /*font-size: 16px;*/
 }
 
 /* Hidden class to initially hide the success message */
@@ -32,7 +33,7 @@
 
 .menu {
     position: fixed;
-    top: 15vh;
+    top: 11.5vh;
     right: 0;
     width: 200px;
     background-color: #444;
@@ -133,6 +134,7 @@
 
 /* Push main content below the banner */
 .content {
+    font-size: 20px;
     margin-top: 15vh; /* Adjust based on the height of the banner */
     background-color: #ffffff;
     text-align: left;
