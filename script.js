@@ -24,7 +24,6 @@ document.getElementById('contactForm').addEventListener('submit', function(event
         return;
     }
 
-    // If all validations pass, submit the form
     // Submit the form
     const formData = new FormData(this);
     fetch('https://script.google.com/macros/s/AKfycbzSFKmPwEZxS_c4Y129nNDbeKGhpzPbl_UhURoAUMjPgeJR7g86XmetPz49OR3WmvdV/exec', {
@@ -34,10 +33,19 @@ document.getElementById('contactForm').addEventListener('submit', function(event
     .then(response => response.json())
     .then(data => {
         if (data.status === "success") {
+            // Display success message
             alert("Form submitted successfully! We'll get back to you as soon as possible.");
             const successMessage = document.getElementById('successMessage');
             successMessage.style.display = 'block';
+
+            // Clear the form
+            document.getElementById('contactForm').reset();
+        } else {
+            throw new Error("Submission failed. Please try again.");
         }
     })
-    .catch(error => console.error('Error:', error));
+    .catch(error => {
+        console.error('Error:', error);
+        alert("There was an error submitting the form. Please try again later.");
+    });
 });
