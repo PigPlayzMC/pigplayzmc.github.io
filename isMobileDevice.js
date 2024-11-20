@@ -19,6 +19,7 @@ if (isMobileDevice()) {
 	headerImage.style.scale = '15%';
 
 	/* Tagline formatting */
+	// 18vw left
 	const tagline = document.querySelector('.tagline');
 	tagline.style.left = '18vw';
 } else {
@@ -37,4 +38,5 @@ if (isMobileDevice()) {
 	
 	/* Tagline formatting */
 	const tagline = document.querySelector('.tagline');
+	tagline.style.left = '42vw';
 }
