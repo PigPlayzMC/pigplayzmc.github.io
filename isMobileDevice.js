@@ -20,6 +20,7 @@ if (isMobileDevice()) {
 
 	/* Tagline formatting */
 	const tagline = document.querySelector('.tagline');
+	tagline.style.left = '18vw';
 } else {
 	console.log("Standard formatting in effect.");
 
