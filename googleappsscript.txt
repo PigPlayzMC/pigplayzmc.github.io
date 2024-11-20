@@ -2,6 +2,28 @@ function doPost(e) {
     const sheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName("Form submissions"); // Adjust the sheet name
     const data = e.parameter;
     const newRow = [data.name, data.email, data.message, new Date()];
+
+  let spreadsheet = SpreadsheetApp.getActiveSpreadsheet();
+  let targetSheet = spreadsheet.getSheetByName('Form submissions');
+  let targetCell = targetSheet.getRange('F2');
+  let currValue = targetCell.getValue();
+  if(isNaN(currValue)){
+    console.log('Cell does not contain a number')
+    return
+  }
+  let newValue = currValue+1
+  targetCell.setValue(newValue)
+
+    const cellValue = SpreadsheetApp.getActiveSpreadsheet().getSheetByName("Form submissions").getRange("F2").getValue();
+
+    const response = {
+      status: "Success",
+      cellValue: cellValue
+    }
+
     sheet.appendRow(newRow);
-    return ContentService.createTextOutput(JSON.stringify({ "status": "success" })).setMimeType(ContentService.MimeType.JSON);
+
+    return ContentService
+      .createTextOutput(JSON.stringify(response))
+      .setMimeType(ContentService.MimeType.JSON);
 }
