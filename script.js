@@ -27,7 +27,7 @@ document.getElementById('contactForm').addEventListener('submit', function(event
     // If all validations pass, submit the form
     // Submit the form
     const formData = new FormData(this);
-    fetch('https://script.google.com/macros/s/AKfycbzIoPN2DsTZsM56Uy1OfAB2ay3aoiI91aGywa5ZUY8UTXx1-A96h1TMiZDcDKkGX6jo/exec', {
+    fetch('https://script.google.com/macros/s/AKfycbzSFKmPwEZxS_c4Y129nNDbeKGhpzPbl_UhURoAUMjPgeJR7g86XmetPz49OR3WmvdV/exec', {
         method: 'POST',
         body: formData,
     })
