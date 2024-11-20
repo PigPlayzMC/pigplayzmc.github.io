@@ -18,7 +18,8 @@ if (isMobileDevice()) {
 	const headerImage = document.querySelector('.header-image');
 	headerImage.style.scale = '15%';
 
-	
+	/* Tagline formatting */
+	const tagline = document.querySelector('.tagline');
 } else {
 	console.log("Standard formatting in effect.");
 
@@ -32,4 +33,7 @@ if (isMobileDevice()) {
 	/* Header logo formatting */
 	const headerImage = document.querySelector('.header-image');
 	headerImage.style.scale = '20%';
+	
+	/* Tagline formatting */
+	const tagline = document.querySelector('.tagline');
 }
