@@ -14,9 +14,9 @@ if (isMobileDevice()) {
 	element.style.marginTop = '17vh'; 
 
 	/* Header logo formatting */
-	// 15% scale
+	// Hide
 	const headerImage = document.querySelector('.header-image');
-	headerImage.style.scale = '15%';
+	headerImage.classList.toggle('hidden');
 } else {
 	console.log("Standard formatting in effect.");
 
