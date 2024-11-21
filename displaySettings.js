@@ -40,6 +40,11 @@ var spacing = 0; // standard spacing
 document.getElementById('display-toggle').addEventListener('click', function() {
     const menu = document.getElementById('display-menu');
     menu.classList.toggle('hidden');
+    menu.style.width = "600px";
+    menu.style.left = "50vw - 600px";
+    menu.style.right = "auto";
+    menu.style.top = "auto";
+    menu.style.bottom = "auto";
 });
 
 document.getElementById('small-font').addEventListener('click', function() {
