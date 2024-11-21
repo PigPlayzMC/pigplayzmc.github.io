@@ -7,7 +7,7 @@
     /*font-size: 16px;*/
 }
 
-/* Hidden class to initially hide the success message */
+/* Hidden class to initially hide */
 .hidden {
     display: none;
 }
@@ -22,8 +22,28 @@
     align-items: flex-end;
     z-index: 1005;
 }
+ 
+.display-settings {
+    /* Settings for the display settings button */
+    color: white;
+    position: fixed;
+    top: 1vh;
+    right: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    z-index: 1005;
+}
 
 .navigation-button {
+    font-size: 24px;
+    background: none;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.display-button {
     font-size: 24px;
     background: none;
     color: white;

@@ -3,9 +3,11 @@ function darkmode(darkmodeOn) {
     if (darkmodeOn) {
         console.log("Light mode enabled."); // light
         element.style.backgroundColor = "#ffffff"
+        return false
     } else {
         console.log("Dark mode enabled."); // dark
         element.style.backgroundColor = "#000000"
+        return true
     }
 }
 
@@ -34,3 +36,12 @@ function spaces(spacing) {
 var darkmodeOn = false; // light/normal mode
 var size = 1; // 20px
 var spacing = 0; // standard spacing
+
+document.getElementById('display-toggle').addEventListener('click', function() {
+    const menu = document.getElementById('display-menu');
+    menu.classList.toggle('hidden');
+});
+
+document.getElementById('small-font').addEventListener('click', function() {
+    fontSize(0)
+});
