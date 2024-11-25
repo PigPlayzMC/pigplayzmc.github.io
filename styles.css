@@ -246,3 +246,56 @@ button:hover {
 #reinstall-software {
     transition: opacity 0.3s ease;
 }
+
+.access {
+    color: white;
+    position: fixed;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: block;
+    padding: 20px;
+}
+
+.access div {
+    /* Can't remember if this bit is important so better just leave it for now! :) */
+    width: auto;
+    padding: 20px;
+}
+
+.menu2 {
+    width: 500px;
+    background-color: #444;
+    border: 1px solid #555;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    left: 50vw - 250px;
+    right: auto;
+    top: auto;
+    bottom: auto;
+}
+
+.menu2 ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu2 li {
+    margin: 0;
+    padding: 10;
+    border-bottom: 1px solid #555;
+}
+
+.menu2 li a {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    text-decoration: none;
+    color: white;
+    background-color: transparent;
+}
+
+.menu2 li a:hover {
+    color: #ddd;
+    background-color: #555;
+}

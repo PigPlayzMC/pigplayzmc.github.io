@@ -40,20 +40,10 @@ var spacing = 0; // standard spacing
 document.getElementById('display-toggle').addEventListener('click', function() {
     const menu = document.getElementById('display-menu');
     menu.classList.toggle('hidden');
-    menu.style.width = "600px";
-
-    var leftAlign = innerWidth - 600;
-    leftAlign = leftAlign.toString();
-    leftAlign = leftAlign.concat("px")
-
-    console.log(leftAlign)
-    menu.style.left = leftAlign;
-    menu.style.right = "auto";
-
-    menu.style.top = "auto";
-    menu.style.bottom = "auto";
 });
 
+/*
 document.getElementById('small-font').addEventListener('click', function() {
     fontSize(0)
 });
+*/
