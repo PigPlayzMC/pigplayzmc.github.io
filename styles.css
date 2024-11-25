@@ -265,8 +265,8 @@ button:hover {
 
 .menu2 {
     width: 500px;
-    background-color: #444;
-    border: 1px solid #555;
+    background-color: #151515;
+    border: 1px solid #3b3b3b;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
     left: 50vw - 250px;
     right: auto;
@@ -282,7 +282,7 @@ button:hover {
 
 .menu2 li {
     margin: 0;
-    padding: 10;
+    padding: 10px;
     border-bottom: 1px solid #555;
 }
 
