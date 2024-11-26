@@ -42,7 +42,13 @@ document.getElementById('display-toggle').addEventListener('click', function() {
     menu.classList.toggle('hidden');
 });
 
-
+// Listen for all font size button clicks
 document.getElementById('small-font').addEventListener('click', function() {
-    fontSize(0)
+    fontSize(0);
+});
+document.getElementById('standard-font').addEventListener('click', function() {
+    fontSize(1);
+});
+document.getElementById('large-font').addEventListener('click', function() {
+    fontSize(2);
 });
