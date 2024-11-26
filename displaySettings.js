@@ -42,8 +42,7 @@ document.getElementById('display-toggle').addEventListener('click', function() {
     menu.classList.toggle('hidden');
 });
 
-/*
+
 document.getElementById('small-font').addEventListener('click', function() {
     fontSize(0)
 });
-*/
