@@ -272,6 +272,7 @@ button:hover {
     right: auto;
     top: auto;
     bottom: auto;
+    padding: 10px;
 }
 
 .menu2 ul {
@@ -298,4 +299,8 @@ button:hover {
 .menu2 li a:hover {
     color: #ddd;
     background-color: #555;
+}
+
+.accessibility-button {
+
 }
