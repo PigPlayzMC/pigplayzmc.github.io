@@ -7,7 +7,7 @@
     /*font-size: 16px;*/
 }
 
-/* Hidden class to initially hide the success message */
+/* Hidden class to initially hide */
 .hidden {
     display: none;
 }
@@ -22,8 +22,28 @@
     align-items: flex-end;
     z-index: 1005;
 }
+ 
+.display-settings {
+    /* Settings for the display settings button */
+    color: white;
+    position: fixed;
+    top: 1vh;
+    right: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    z-index: 1005;
+}
 
 .navigation-button {
+    font-size: 24px;
+    background: none;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.display-button {
     font-size: 24px;
     background: none;
     color: white;
@@ -225,4 +245,62 @@ button:hover {
 
 #reinstall-software {
     transition: opacity 0.3s ease;
+}
+
+.access {
+    color: white;
+    position: fixed;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: block;
+    padding: 20px;
+}
+
+.access div {
+    /* Can't remember if this bit is important so better just leave it for now! :) */
+    width: auto;
+    padding: 20px;
+}
+
+.menu2 {
+    width: 500px;
+    background-color: #151515;
+    border: 1px solid #3b3b3b;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    left: 50vw - 250px;
+    right: auto;
+    top: auto;
+    bottom: auto;
+    padding: 10px;
+}
+
+.menu2 ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu2 li {
+    margin: 0;
+    padding: 10px;
+    border-bottom: 1px solid #555;
+}
+
+.menu2 li a {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    text-decoration: none;
+    color: white;
+    background-color: transparent;
+}
+
+.menu2 li a:hover {
+    color: #ddd;
+    background-color: #555;
+}
+
+.accessibility-button {
+    text-align: left;
 }
