@@ -33,9 +33,9 @@ function spaces(spacing) {
     }
 }
 
-var darkmodeOn = false; // light/normal mode
-var size = 1; // 20px
-var spacing = 0; // standard spacing
+let darkmodeOn = false; // light/normal mode
+let size = 1; // 20px
+let spacing = 0; // standard spacing
 
 document.getElementById('display-toggle').addEventListener('click', function() {
     const menu = document.getElementById('display-menu');
