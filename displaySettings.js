@@ -33,10 +33,6 @@ function spaces(spacing) {
     }
 }
 
-let darkmodeOn = false; // light/normal mode
-let size = 1; // 20px
-let spacing = 0; // standard spacing
-
 document.getElementById('display-toggle').addEventListener('click', function() {
     const menu = document.getElementById('display-menu');
     menu.classList.toggle('hidden');
