@@ -27,6 +27,7 @@ function fontSize(size, preloading) {
     // Only sets local theme if its been changed.
     if (!preloading) {
         localStorage.setItem("Size", size)
+        console.log("New style formatting saving...")
     }
 }
 
