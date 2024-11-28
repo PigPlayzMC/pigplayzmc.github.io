@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Electrolize&display=swap" rel="stylesheet">
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="favicon.png" type="image/png">
@@ -11,11 +15,11 @@
             <img src="Logo-04Trans_NoText_NoEmpty.png" alt="Simplistic black and white logo featuring a computer monitor and phone." class="header-image-2">
         </a>
     </div>
-
+    
     <title>Westcountry Repairs - Default</title>
 
     <div class="navigation-dropdown">
-        <button id="navigation-toggle" class="navigation-button" aria-label="Toggle Menu">☰</button>
+        <button id="navigation-toggle" class="navigation-button" aria-label="Toggle navigation">☰</button>
         <nav id="menu" class="menu hidden">
             <ul>
                 <li><a href="index.html">Home</a></li>
@@ -25,10 +29,11 @@
         </nav>
     </div>
 
+    <div class="display-settings">
+        <button id="display-toggle" class="display-button" aria-label="Toggle display settings">*</button>
+    </div>
+
     <link rel="stylesheet" href="styles.css">
-
-
-</head>
 <body>
     <body style="background-color:rgb(255, 255, 255);"></body>
 
@@ -37,6 +42,17 @@
         <h1>WESTCOUNTRY REPAIRS</h1>
         <p>Phones | Computers | Tablets</p>
         <img> </img>
+    </div>
+
+    <div class="access">
+        <nav id="display-menu" class="menu2 hidden">
+            <!-- Put accessibility settings here -->
+             <h3>Accessibility Settings:</h3>
+            <p>Font size:</p>
+            <button id="small-font" class="accessibility-button">Small</button>
+            <button id="standard-font" class="accessibility-button">Standard</button>
+            <button id="large-font" class="accessibility-button">Large</button>
+        </nav>
     </div>
 
     <div class="content">
@@ -55,5 +71,6 @@
 
     <script src="navigation-button.js"></script>
     <script src="isMobileDevice.js"></script>
+    <script src="displaySettings.js"></script>
 </body>
 </html>

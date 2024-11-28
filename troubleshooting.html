@@ -15,23 +15,25 @@
             <img src="Logo-04Trans_NoText_NoEmpty.png" alt="Simplistic black and white logo featuring a computer monitor and phone." class="header-image-2">
         </a>
     </div>
-
+    
     <title>Westcountry Repairs - Troubleshooting</title>
 
     <div class="navigation-dropdown">
-        <button id="navigation-toggle" class="navigation-button" aria-label="Toggle Menu">☰</button>
+        <button id="navigation-toggle" class="navigation-button" aria-label="Toggle navigation">☰</button>
         <nav id="menu" class="menu hidden">
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="aboutus.html">About Us</a></li>
-                <li><a href="troubleshooting.html">Troubleshooting</a></li>
+                <li><a href="troubleshooting.html">Troubleshooting (Here)</a></li>
             </ul>
         </nav>
     </div>
 
+    <div class="display-settings">
+        <button id="display-toggle" class="display-button" aria-label="Toggle display settings">*</button>
+    </div>
+
     <link rel="stylesheet" href="styles.css">
-
-
 </head>
 <body>
     <body style="background-color:rgb(255, 255, 255);"></body>
@@ -41,6 +43,17 @@
         <h1>WESTCOUNTRY REPAIRS</h1>
             <p>Phones | Computers | Tablets</p>
         <img> </img>
+    </div>
+
+    <div class="access">
+        <nav id="display-menu" class="menu2 hidden">
+            <!-- Put accessibility settings here -->
+             <h3>Accessibility Settings:</h3>
+            <p>Font size:</p>
+            <button id="small-font" class="accessibility-button">Small</button>
+            <button id="standard-font" class="accessibility-button">Standard</button>
+            <button id="large-font" class="accessibility-button">Large</button>
+        </nav>
     </div>
 
     <div class="content">
@@ -137,5 +150,6 @@
     <script src="hideText.js"></script>
     <script src="navigation-button.js"></script>
     <script src="isMobileDevice.js"></script>
+    <script src="displaySettings.js"></script>
 </body>
 </html>
