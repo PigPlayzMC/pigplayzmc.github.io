@@ -135,6 +135,7 @@
     top: 0; /* Align it at the top */
     z-index: 1000; /* Ensure it's on top of other elements */
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    max-height: 15vh;
 }
 
 .top-banner {
