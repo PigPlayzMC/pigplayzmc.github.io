@@ -37,6 +37,11 @@ function mobileFormatting() {
 		}
 	} else {
 		console.log("Standard formatting in effect.");
+
+		/* display-settings button formatting (1vw + 48px) */
+		const windowWidth = window.innerWidth;
+		const alignment = windowWidth/100 + 48;
+		accessButton.style.right = alignment;
 	
 		/* Main text formatting */
 		element.style.maxWidth = '75vw';
@@ -46,6 +51,9 @@ function mobileFormatting() {
 	
 		/* Header logo formatting */
 		headerImage.style.scale = '20%';
+		if (headerImage.classList.contains('hidden')) {
+			headerImage.classList.toggle('hidden');
+		}
 	};
 
 	// Phone in landscape mode (But still small)!
