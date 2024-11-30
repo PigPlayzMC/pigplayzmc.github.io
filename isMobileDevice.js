@@ -9,17 +9,16 @@ function screenHeightLimited() {
 }
 
 function mobileFormatting() {
-	console.log("Determining device type...")
+	//console.log("Determining device type...")
 	
 	const banner = document.querySelector('.banner') // Declare once, save space!
 	const headerImage = document.querySelector('.header-image');
 	const element = document.querySelector('.content');
 	const navigationButton = document.querySelector('.navigation-dropdown');
-	const accessButton = document.querySelector('.display-settings');
 
 	// Phone in portrait mode!
 	if (isMobileDevice()) {
-		console.log("Mobile formatting in effect.");
+		//console.log("Mobile formatting in effect.");
 	
 		/* Main text formatting */
 		// Less boundary, more text on each line
@@ -36,12 +35,10 @@ function mobileFormatting() {
 			headerImage.classList.toggle('hidden');
 		}
 	} else {
-		console.log("Standard formatting in effect.");
+		//console.log("Standard formatting in effect.");
 
 		/* display-settings button formatting (1vw + 48px) */
-		const windowWidth = window.innerWidth;
-		const alignment = windowWidth/100 + 48;
-		accessButton.style.right = alignment;
+		adjustButtonAlignment;
 	
 		/* Main text formatting */
 		element.style.maxWidth = '75vw';
@@ -61,7 +58,7 @@ function mobileFormatting() {
 		/* 
 		This is important because otherwise the banner text extends to far if it is set to 15vh.
 		Beyond this point, banner extends for px. Additionally, the banner becomes fixed instead of absolute.*/
-		console.log("Low device height detected")
+		//console.log("Low device height detected")
 
 		banner.style.maxHeight = '81px'; // Big enough that the banner text still fits.
 		banner.style.position = 'absolute';
@@ -72,7 +69,7 @@ function mobileFormatting() {
 		// Offset element properly
 		element.style.marginTop = '85px';
 	} else {
-		console.log("Acceptable device height")
+		//console.log("Acceptable device height")
 		// Banner at max 15vh is fine
 		banner.style.maxHeight = '15vh';
 		banner.style.position = 'fixed';
@@ -82,5 +79,19 @@ function mobileFormatting() {
 	};
 }
 
+function adjustButtonAlignment() {
+	/* display-settings button formatting (1vw + 48px) */
+	let windowWidth = window.innerWidth;
+	const alignment = (windowWidth / 100 + 48) + 'px';
+	accessButton.style.right = alignment;
+	
+}
+
 mobileFormatting // Runs on page load
-setInterval(mobileFormatting(), 1000) // Rechecks if mobile formatting should be active once every 10 seconds.
+setInterval(mobileFormatting, 1000) // Rechecks if mobile formatting should be active once every 1 second(s).
+// Don't call the function with (), just provide a reference
+
+// Call on load and during resizing
+const accessButton = document.querySelector('.display-settings'); // Can't assign with the others in mobileFormatting because it is called independently!
+window.addEventListener('resize', adjustButtonAlignment);
+adjustButtonAlignment();
