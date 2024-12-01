@@ -8,13 +8,22 @@ function screenHeightLimited() {
 		.matchMedia("only screen and (max-height: 541px)").matches;
 }
 
+function accessibilityFits() {
+	return window
+		.matchMedia("(max-width: 600px)").matches;
+}
+
+const banner = document.querySelector('.banner') // Declare once, save space!
+const headerImage = document.querySelector('.header-image');
+const element = document.querySelector('.content');
+const navigationButton = document.querySelector('.navigation-dropdown');
+const accessMenu = document.querySelector('.menu2') // Apologies for the name
+const accessButton = document.querySelector('.display-settings');
+
 function mobileFormatting() {
 	//console.log("Determining device type...")
 	
-	const banner = document.querySelector('.banner') // Declare once, save space!
-	const headerImage = document.querySelector('.header-image');
-	const element = document.querySelector('.content');
-	const navigationButton = document.querySelector('.navigation-dropdown');
+	
 
 	// Phone in portrait mode!
 	if (isMobileDevice()) {
@@ -53,7 +62,7 @@ function mobileFormatting() {
 		}
 	};
 
-	// Phone in landscape mode (But still small)!
+	// Device wide (But still small)!
 	if (screenHeightLimited()) {
 		/* 
 		This is important because otherwise the banner text extends to far if it is set to 15vh.
@@ -77,6 +86,18 @@ function mobileFormatting() {
 		navigationButton.style.position = 'fixed';
 		accessButton.style.position = 'fixed';
 	};
+
+	if (accessibilityFits()) {
+		console.log("Access menu does not fit. Changing width...")
+		// Can't have a 500px window
+		accessMenu.style.width = '100vw';
+		accessMenu.style.left = 'auto';
+	} else {
+		console.log("Access menu fits. Width = 500px.")
+		// Can use a full 500px window
+		accessMenu.style.width = '500px';
+		accessMenu.style.left = 'calc(50vw - 250px)';
+	}
 }
 
 function adjustButtonAlignment() {
@@ -87,11 +108,12 @@ function adjustButtonAlignment() {
 	
 }
 
-mobileFormatting // Runs on page load
-window.addEventListener('resize', mobileFormatting) // Rechecks if mobile formatting should be active when resized.
-// Don't call the function with (), just provide a reference
+function resize() {
+	// Reduces number of listener events created.
+	mobileFormatting();
+	adjustButtonAlignment();
+}
 
 // Call on load and during resizing
-const accessButton = document.querySelector('.display-settings'); // Can't assign with the others in mobileFormatting because it is called independently!
-window.addEventListener('resize', adjustButtonAlignment);
-adjustButtonAlignment();
+resize(); // Runs on page load
+window.addEventListener('resize', resize);
