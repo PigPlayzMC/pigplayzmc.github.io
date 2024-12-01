@@ -88,7 +88,7 @@ function adjustButtonAlignment() {
 }
 
 mobileFormatting // Runs on page load
-setInterval(mobileFormatting, 1000) // Rechecks if mobile formatting should be active once every 1 second(s).
+window.addEventListener('resize', mobileFormatting) // Rechecks if mobile formatting should be active when resized.
 // Don't call the function with (), just provide a reference
 
 // Call on load and during resizing
