@@ -14,13 +14,13 @@ function darkmode(darkmodeOn) {
 function fontSize(size, preloading) {
     const element = document.querySelector('.content');
     if (size == 0) {
-        console.log("Small font size selected."); // 16px
+        //console.log("Small font size selected."); // 16px
         element.style.fontSize = "16px";
     } else if (size == 1) {
-        console.log("Standard font size selected."); // 20px
+        //console.log("Standard font size selected."); // 20px
         element.style.fontSize = "20px";
     } else {
-        console.log("Large font size selected."); // 24px
+        //console.log("Large font size selected."); // 24px
         element.style.fontSize = "24px";
     }
     
