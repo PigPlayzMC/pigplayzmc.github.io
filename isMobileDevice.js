@@ -101,10 +101,16 @@ function mobileFormatting() {
 }
 
 function adjustButtonAlignment() {
-	/* display-settings button formatting (1vw + 48px) */
-	let windowWidth = window.innerWidth;
-	const alignment = (windowWidth / 100 + 48) + 'px';
-	accessButton.style.right = alignment;
+	// Button on right if not a mobile device
+	if (!isMobileDevice()) {
+		/* display-settings button formatting (1vw + 48px) */
+		let windowWidth = window.innerWidth;
+		const alignment = (windowWidth / 100 + 48) + 'px';
+		accessButton.style.right = alignment;
+	} else {
+		accessButton.style.left = '1vw';
+		accessButton.style.right = 'auto';
+	}
 	
 }
 
