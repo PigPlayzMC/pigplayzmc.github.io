@@ -1,13 +1,15 @@
-function darkmode(darkmodeOn) {
+function darkmode(darkmodeOn, preloading) {
     const element = document.querySelector('.content')
-    if (darkmodeOn) {
+    if (!darkmodeOn) {
         console.log("Light mode enabled."); // light
-        element.style.backgroundColor = "#ffffff"
-        return false
     } else {
         console.log("Dark mode enabled."); // dark
-        element.style.backgroundColor = "#000000"
-        return true
+    }
+
+    // Only sets local theme if its been changed.
+    if (!preloading) {
+        localStorage.setItem("Theme", darkmodeOn)
+        console.log("New style formatting saving...")
     }
 }
 
@@ -42,9 +44,10 @@ function spaces(spacing) {
 // Initialise with correct formatting
 try {
     fontSize(localStorage.getItem("Size"), true);
+    darkmode(localStorage.getItem("Theme"), true);
     }
 catch {
-    console.log("No previous style settings found")
+    console.log("No previous style settings found");
 }
 
 // Button toggle
@@ -62,4 +65,12 @@ document.getElementById('standard-font').addEventListener('click', function() {
 });
 document.getElementById('large-font').addEventListener('click', function() {
     fontSize(2, false);
+});
+
+// Listen for theme clicks
+document.getElementById('light-mode').addEventListener('click', function() {
+    fontSize(false, false);
+});
+document.getElementById('dark-mode').addEventListener('click', function() {
+    fontSize(true, false);
 });
