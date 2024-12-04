@@ -10,8 +10,8 @@ function darkmode(darkmodeOn, preloading) {
 
     // Only sets local theme if its been changed.
     if (!preloading) {
-        localStorage.setItem("Theme", darkmodeOn)
-        console.log("New theme formatting saving...")
+        localStorage.setItem("Theme", darkmodeOn);
+        console.log("New theme formatting saving...");
     }
 }
 
@@ -30,8 +30,8 @@ function fontSize(size, preloading) {
     
     // Only sets local theme if its been changed.
     if (!preloading) {
-        localStorage.setItem("Size", size)
-        console.log("New font size formatting saving...")
+        localStorage.setItem("Size", size);
+        console.log("New font size formatting saving...");
     }
 }
 
@@ -46,10 +46,18 @@ function spaces(spacing) {
 // Initialise with correct formatting
 try {
     fontSize(localStorage.getItem("Size"), true);
-    darkmode(localStorage.getItem("Theme"), true);
     }
 catch {
-    console.log("No previous style settings found");
+    console.log("No previous font size settings found");
+    fontSize(1, false);
+}
+
+try {
+    darkmode(localStorage.getItem("Theme"), true);
+}
+catch {
+    console.log("No previous theme settings found")
+    darkmode(false, true);
 }
 
 // Button toggle
