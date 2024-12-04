@@ -53,7 +53,7 @@ catch {
 }
 
 try {
-    darkmode(localStorage.getItem("Theme"), true);
+    darkmode(localStorage.getItem("Theme") === "true", true);
 }
 catch {
     console.log("No previous theme settings found")
