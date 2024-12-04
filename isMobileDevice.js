@@ -107,6 +107,7 @@ function adjustButtonAlignment() {
 		let windowWidth = window.innerWidth;
 		const alignment = (windowWidth / 100 + 48) + 'px';
 		accessButton.style.right = alignment;
+		accessButton.style.left = 'auto';
 	} else {
 		accessButton.style.left = '1vw';
 		accessButton.style.right = 'auto';
