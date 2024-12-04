@@ -153,21 +153,22 @@
 
 /* Houses content and other central elements such as forms */
 .central-bar {
-    max-width: 50vw;
+    max-width: 51vw;
     margin-inline: auto;
+    background: rgba(53, 53, 53, 0.7); /* Gets changed with dark mode */
 }
 
 /* Push main content below the banner */
 .content {
     font-size: 20px;
-    margin-top: 15vh; /* Adjust based on the height of the banner */
-    background-color: #ffffff;
+    margin-top: 15.5vh; /* Adjust based on the height of the banner */
+    background-color: transparent;
     text-align: left;
-    padding-left: 0vw !important; /* Override default padding behaviour */
+    padding-left: 0.5vw !important; /* Override default padding behaviour */
     font-family: 'Helvetica Neue', Geneva, Verdana, sans-serif;
     word-wrap: break-word;
     overflow-wrap: break-word;
-    margin: 0px;
+    margin: 10px;
     max-width: 75vw !important;
 }
 
