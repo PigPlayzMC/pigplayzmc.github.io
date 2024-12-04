@@ -1,9 +1,11 @@
 function darkmode(darkmodeOn, preloading) {
-    const element = document.querySelector('.content')
+    const element = document.querySelector('.central-bar')
     if (!darkmodeOn) {
         console.log("Light mode enabled."); // light
+        element.style.background = "rgba(212, 212, 212, 0.7)"; // Default
     } else {
         console.log("Dark mode enabled."); // dark
+        element.style.background = "rgba(53, 53, 53, 0.7)"; // Not default
     }
 
     // Only sets local theme if its been changed.
@@ -69,8 +71,8 @@ document.getElementById('large-font').addEventListener('click', function() {
 
 // Listen for theme clicks
 document.getElementById('light-mode').addEventListener('click', function() {
-    fontSize(false, false);
+    darkmode(false, false);
 });
 document.getElementById('dark-mode').addEventListener('click', function() {
-    fontSize(true, false);
+    darkmode(true, false);
 });
