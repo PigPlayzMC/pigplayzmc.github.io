@@ -11,7 +11,7 @@ function darkmode(darkmodeOn, preloading) {
     // Only sets local theme if its been changed.
     if (!preloading) {
         localStorage.setItem("Theme", darkmodeOn)
-        console.log("New style formatting saving...")
+        console.log("New theme formatting saving...")
     }
 }
 
@@ -31,7 +31,7 @@ function fontSize(size, preloading) {
     // Only sets local theme if its been changed.
     if (!preloading) {
         localStorage.setItem("Size", size)
-        console.log("New style formatting saving...")
+        console.log("New font size formatting saving...")
     }
 }
 
