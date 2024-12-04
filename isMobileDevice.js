@@ -88,12 +88,12 @@ function mobileFormatting() {
 	};
 
 	if (accessibilityFits()) {
-		console.log("Access menu does not fit. Changing width...")
+		//console.log("Access menu does not fit. Changing width...")
 		// Can't have a 500px window
 		accessMenu.style.width = '100vw';
 		accessMenu.style.left = 'auto';
 	} else {
-		console.log("Access menu fits. Width = 500px.")
+		//console.log("Access menu fits. Width = 500px.")
 		// Can use a full 500px window
 		accessMenu.style.width = '500px';
 		accessMenu.style.left = 'calc(50vw - 250px)';
