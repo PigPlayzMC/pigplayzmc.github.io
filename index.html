@@ -45,60 +45,64 @@
         <img> </img>
     </div>
     
-    <div class="access">
-        <nav id="display-menu" class="menu2 hidden">
-            <!-- Put accessibility settings here -->
-             <h3>Accessibility Settings:</h3>
-            <p>Font size:</p>
-            <button id="small-font" class="accessibility-button">Small</button>
-            <button id="standard-font" class="accessibility-button">Standard</button>
-            <button id="large-font" class="accessibility-button">Large</button>
-        </nav>
-    </div>
+    <div class="central-bar">
+        <div class="access">
+            <nav id="display-menu" class="menu2 hidden">
+                <!-- Put accessibility settings here -->
+                <h3>Accessibility Settings:</h3>
+                <p>Font size:</p>
+                <button id="small-font" class="accessibility-button">Small</button>
+                <button id="standard-font" class="accessibility-button">Standard</button>
+                <button id="large-font" class="accessibility-button">Large</button>
+                <p>Theme:</p>
+                <button id="light-mode" class="accessibility-button">Light</button>
+                <button id="dark-mode" class="accessibility-button">Dark</button>
+            </nav>
+        </div>
 
-    <div class="content">
-        <!-- Written on small screen, apologies for potential readability issues :I -->
-        <p>Welcome to Westcountry Repairs, your one-stop shop
-            for electronics repairs and software issues of all kinds.<br><br>
-            Thank you for considering our small business for your repair. Whilst 
-            we're happy to help, we have a few 
-            <a href="troubleshooting.html">troubleshooting</a> suggestions
-            for software issues. These tips help save us time and you money; sometimes,
-            turning it off and on again is the answer.<br><br>
-            If these don't help, send us a message on our form below and we'll get
-            back to you as soon as possible! <br><br>
-            <strong>PLEASE REMEMBER THAT THIS WEBSITE IS STILL UNDER CONSTRUCTION<br>Send bug reports to website@westcountryrepairs.co.uk</strong>
-        </p>
-    </div>
+        <div class="content">
+            <!-- Written on small screen, apologies for potential readability issues :I -->
+            <p>Welcome to Westcountry Repairs, your one-stop shop
+                for electronics repairs and software issues of all kinds.<br><br>
+                Thank you for considering our small business for your repair. Whilst 
+                we're happy to help, we have a few 
+                <a href="troubleshooting.html">troubleshooting</a> suggestions
+                for software issues. These tips help save us time and you money; sometimes,
+                turning it off and on again is the answer.<br><br>
+                If these don't help, send us a message on our form below and we'll get
+                back to you as soon as possible! <br><br>
+                <strong>PLEASE REMEMBER THAT THIS WEBSITE IS STILL UNDER CONSTRUCTION<br>Send bug reports to website@westcountryrepairs.co.uk</strong>
+            </p>
+        </div>
 
-    <!-- Temp button for debugging font size.-->
-    <!-- <button id="small-font" aria-label="Small font">Small font</button> -->
+        <!-- Temp button for debugging font size.-->
+        <!-- <button id="small-font" aria-label="Small font">Small font</button> -->
 
-    <!-- Input Form -->
-    <div class="form-container">
-        <form id="contactForm">
-            <h2>Book a repair appointment today!</h2>
-            <p><i>Please do not submit payment information through the form.<br>
-            Message must include device model number if known.</i></p>
-            
-            <label for="name">Name: </label>
-            <input type="text" id="name" name="name" autocomplete="name" required>
+        <!-- Input Form -->
+        <div class="form-container">
+            <form id="contactForm">
+                <h2>Book a repair appointment today!</h2>
+                <p><i>Please do not submit payment information through the form.<br>
+                Message must include device model number if known.</i></p>
+                
+                <label for="name">Name: </label>
+                <input type="text" id="name" name="name" autocomplete="name" required>
 
-            <label for="email">Email Address: </label>
-            <input type="email" id="email" name="email" autocomplete="email" required>
+                <label for="email">Email Address: </label>
+                <input type="email" id="email" name="email" autocomplete="email" required>
 
-            <label for="message">Message: </label>
-            <textarea id="message" name="message" rows="4" required></textarea>
+                <label for="message">Message: </label>
+                <textarea id="message" name="message" rows="4" required></textarea>
 
-            <button type="submit">Submit!</button>
-        </form>
+                <button type="submit">Submit!</button>
+            </form>
 
-        <!-- Hidden success message -->
-        <div id="successMessage" class="hidden">
-            <h3>Thank you for your submission. We aim to respond to you in 48 hours or less.</h3>
+            <!-- Hidden success message -->
+            <div id="successMessage" class="hidden">
+                <h3>Thank you for your submission. We aim to respond to you in 48 hours or less.</h3>
+            </div>
         </div>
     </div>
-
     <script src="script.js"></script>
     <script src="navigation-button.js"></script>
     <script src="isMobileDevice.js"></script>

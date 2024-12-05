@@ -1,13 +1,17 @@
-function darkmode(darkmodeOn) {
-    const element = document.querySelector('.content')
-    if (darkmodeOn) {
+function darkmode(darkmodeOn, preloading) {
+    const element = document.querySelector('.central-bar')
+    if (!darkmodeOn) {
         console.log("Light mode enabled."); // light
-        element.style.backgroundColor = "#ffffff"
-        return false
+        element.style.background = "rgba(212, 212, 212, 0.7)"; // Default
     } else {
         console.log("Dark mode enabled."); // dark
-        element.style.backgroundColor = "#000000"
-        return true
+        element.style.background = "rgba(53, 53, 53, 0.7)"; // Not default
+    }
+
+    // Only sets local theme if its been changed.
+    if (!preloading) {
+        localStorage.setItem("Theme", darkmodeOn);
+        console.log("New theme formatting saving...");
     }
 }
 
@@ -26,8 +30,8 @@ function fontSize(size, preloading) {
     
     // Only sets local theme if its been changed.
     if (!preloading) {
-        localStorage.setItem("Size", size)
-        console.log("New style formatting saving...")
+        localStorage.setItem("Size", size);
+        console.log("New font size formatting saving...");
     }
 }
 
@@ -44,7 +48,16 @@ try {
     fontSize(localStorage.getItem("Size"), true);
     }
 catch {
-    console.log("No previous style settings found")
+    console.log("No previous font size settings found");
+    fontSize(1, false);
+}
+
+try {
+    darkmode(localStorage.getItem("Theme") === "true", true);
+}
+catch {
+    console.log("No previous theme settings found")
+    darkmode(false, true);
 }
 
 // Button toggle
@@ -62,4 +75,12 @@ document.getElementById('standard-font').addEventListener('click', function() {
 });
 document.getElementById('large-font').addEventListener('click', function() {
     fontSize(2, false);
+});
+
+// Listen for theme clicks
+document.getElementById('light-mode').addEventListener('click', function() {
+    darkmode(false, false);
+});
+document.getElementById('dark-mode').addEventListener('click', function() {
+    darkmode(true, false);
 });

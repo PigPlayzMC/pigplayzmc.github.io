@@ -151,18 +151,27 @@
     padding-bottom: 0;
 }
 
+/* Houses content and other central elements such as forms */
+.central-bar {
+    max-width: 51vw;
+    margin-inline: auto;
+    background: rgba(212, 212, 212, 0.7); /* Gets changed with dark mode */
+
+    margin-top: 15.5vh; /* Adjust based on the height of the banner */
+}
+
 /* Push main content below the banner */
 .content {
+    margin-top: 10px;
     font-size: 20px;
-    margin-top: 15vh; /* Adjust based on the height of the banner */
-    background-color: #ffffff;
+    background-color: transparent;
     text-align: left;
-    padding-left: 25vw;
+    padding-left: 0.5vw !important; /* Override default padding behaviour */
     font-family: 'Helvetica Neue', Geneva, Verdana, sans-serif;
     word-wrap: break-word;
     overflow-wrap: break-word;
-    margin: 20;
-    max-width: 75vw;
+    margin: 10px;
+    max-width: 75vw !important;
 }
 
 .form-container {
