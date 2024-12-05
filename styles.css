@@ -321,4 +321,5 @@ button:hover {
 
 .accessibility-button {
     text-align: left;
+    border-radius: 2px;
 }
