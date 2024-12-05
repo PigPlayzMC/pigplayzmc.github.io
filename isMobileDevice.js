@@ -15,7 +15,7 @@ function accessibilityFits() {
 
 const banner = document.querySelector('.banner') // Declare once, save space!
 const headerImage = document.querySelector('.header-image');
-const element = document.querySelector('.content');
+const centralBar = document.querySelector('.central-bar');
 const navigationButton = document.querySelector('.navigation-dropdown');
 const accessMenu = document.querySelector('.menu2') // Apologies for the name
 const accessButton = document.querySelector('.display-settings');
@@ -31,10 +31,10 @@ function mobileFormatting() {
 	
 		/* Main text formatting */
 		// Less boundary, more text on each line
-		element.style.maxWidth = '95vw';
-		element.style.marginLeft = '0';
-		element.style.paddingLeft = '5vw';
-		element.style.marginTop = '17vh'; 
+		centralBar.style.maxWidth = '95vw';
+		centralBar.style.marginLeft = '0';
+		centralBar.style.paddingLeft = '5vw';
+		centralBar.style.marginTop = '17vh'; 
 	
 		/* Header logo formatting */
 		// Hide
@@ -50,10 +50,10 @@ function mobileFormatting() {
 		adjustButtonAlignment;
 	
 		/* Main text formatting */
-		element.style.maxWidth = '75vw';
-		element.style.marginLeft = '20';
-		element.style.paddingLeft = '25vw';
-		element.style.marginTop = '15vh';
+		centralBar.style.maxWidth = '75vw';
+		centralBar.style.marginLeft = '20';
+		centralBar.style.paddingLeft = '25vw';
+		centralBar.style.marginTop = '15vh';
 	
 		/* Header logo formatting */
 		headerImage.style.scale = '20%';
