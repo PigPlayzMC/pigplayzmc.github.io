@@ -172,6 +172,7 @@
     overflow-wrap: break-word;
     margin: 10px;
     max-width: 75vw !important;
+    padding-top: 10px;
 }
 
 .form-container {
