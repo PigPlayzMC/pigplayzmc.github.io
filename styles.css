@@ -157,6 +157,7 @@
     margin-inline: auto;
     background: rgba(212, 212, 212, 0.7); /* Gets changed with dark mode */
     margin-top: 15.5vh; /* Adjust based on the height of the banner */
+    border-radius: 10px;
 }
 
 /* Push main content below the banner */
