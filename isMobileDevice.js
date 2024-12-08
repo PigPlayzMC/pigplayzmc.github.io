@@ -15,10 +15,11 @@ function accessibilityFits() {
 
 const banner = document.querySelector('.banner') // Declare once, save space!
 const headerImage = document.querySelector('.header-image');
-const element = document.querySelector('.content');
+const centralBar = document.querySelector('.central-bar');
 const navigationButton = document.querySelector('.navigation-dropdown');
 const accessMenu = document.querySelector('.menu2') // Apologies for the name
 const accessButton = document.querySelector('.display-settings');
+const content = document.querySelector('.content');
 
 function mobileFormatting() {
 	//console.log("Determining device type...")
@@ -31,10 +32,12 @@ function mobileFormatting() {
 	
 		/* Main text formatting */
 		// Less boundary, more text on each line
-		element.style.maxWidth = '95vw';
-		element.style.marginLeft = '0';
-		element.style.paddingLeft = '5vw';
-		element.style.marginTop = '17vh'; 
+		centralBar.style.maxWidth = '95vw';
+		centralBar.style.marginInline = 'auto';
+		centralBar.style.paddingLeft = '0vw';
+		centralBar.style.marginTop = '17vh';
+		content.style.textAlign = 'center';
+		content.style.setProperty('max-width', '95vw', 'important');
 	
 		/* Header logo formatting */
 		// Hide
@@ -50,10 +53,11 @@ function mobileFormatting() {
 		adjustButtonAlignment;
 	
 		/* Main text formatting */
-		element.style.maxWidth = '75vw';
-		element.style.marginLeft = '20';
-		element.style.paddingLeft = '25vw';
-		element.style.marginTop = '15vh';
+		centralBar.style.maxWidth = '51vw';
+		centralBar.style.marginInline = 'auto';
+		centralBar.style.marginTop = '15.5vh';
+		content.style.textAlign = 'left';
+		content.style.setProperty('max-width', '75vw', 'important');
 	
 		/* Header logo formatting */
 		headerImage.style.scale = '20%';
@@ -76,7 +80,7 @@ function mobileFormatting() {
 		accessButton.style.position = 'absolute';
 
 		// Offset element properly
-		element.style.marginTop = '85px';
+		content.style.marginTop = '85px';
 	} else {
 		//console.log("Acceptable device height")
 		// Banner at max 15vh is fine
