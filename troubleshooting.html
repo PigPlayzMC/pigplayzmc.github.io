@@ -42,109 +42,112 @@
         <img> </img>
     </div>
 
-    <div class="access">
-        <nav id="display-menu" class="menu2 hidden">
-            <!-- Put accessibility settings here -->
-             <h3>Accessibility Settings:</h3>
-            <p>Font size:</p>
-            <button id="small-font" class="accessibility-button">Small</button>
-            <button id="standard-font" class="accessibility-button">Standard</button>
-            <button id="large-font" class="accessibility-button">Large</button>
-            <p>Theme:</p>
-            <button id="light-mode" class="accessibility-button">Light</button>
-            <button id="dark-mode" class="accessibility-button">Dark</button>
-        </nav>
-    </div>
 
-    <div class="content">
-        <!-- Written on small screen, apologies for potential readability issues :I -->
-        <p><br>Welcome to the troubleshooting page. If you have a 
-            software issue, this is the place to be! By following 
-            these instructions, you have the best chance of 
-            sorting the problem by yourself.<br><br>
-            <i>Need more information? Just click the header to see specific 
-                instructions!</i><br>
-            <div class="clickable-header">
-                <h1 onclick="toggleParagraph('restart-computer')"><b>[1]</b> Restart your computer</h1>
-            </div>
-            <div id="restart-computer" class="hidden-text">
-                This might seem obvious but if you're having an problem 
-                with your computer, phone, or other device, this is a 
-                great first step. Powering off then powering back on 
-                can fix a lot of common problems and is a great way 
-                to get your tech back up and running without any 
-                cost. For instructions on rebooting your specific device, 
-                keep reading.<br><br>
+    <div class="central-bar">
+        <div class="access">
+            <nav id="display-menu" class="menu2 hidden">
+                <!-- Put accessibility settings here -->
+                <h3>Accessibility Settings:</h3>
+                <p>Font size:</p>
+                <button id="small-font" class="accessibility-button">Small</button>
+                <button id="standard-font" class="accessibility-button">Standard</button>
+                <button id="large-font" class="accessibility-button">Large</button>
+                <p>Theme:</p>
+                <button id="light-mode" class="accessibility-button">Light</button>
+                <button id="dark-mode" class="accessibility-button">Dark</button>
+            </nav>
+        </div>
 
-                <h2>Linux: </h2>
-                To reboot on a Linux machine, you can open a terminal window 
-                and type the command; "reboot". If you can't open a 
-                terminal window, there should be a physical power key on your 
-                device which you can press and hold until the device powers off.
-                For help finding yours, search "<i>your-device</i> power button". If 
-                you use your physical button, remember to turn the device back on!<br><br>
+        <div class="content">
+            <!-- Written on small screen, apologies for potential readability issues :I -->
+            <p><br>Welcome to the troubleshooting page. If you have a 
+                software issue, this is the place to be! By following 
+                these instructions, you have the best chance of 
+                sorting the problem by yourself.<br><br>
+                <i>Need more information? Just click the header to see specific 
+                    instructions!</i><br>
+                <div class="clickable-header">
+                    <h1 onclick="toggleParagraph('restart-computer')"><b>[1]</b> Restart your computer</h1>
+                </div>
+                <div id="restart-computer" class="hidden-text">
+                    This might seem obvious but if you're having an problem 
+                    with your computer, phone, or other device, this is a 
+                    great first step. Powering off then powering back on 
+                    can fix a lot of common problems and is a great way 
+                    to get your tech back up and running without any 
+                    cost. For instructions on rebooting your specific device, 
+                    keep reading.<br><br>
 
-                <h2>Windows: </h2>
-                To reboot a device running Windows, move your mouse to the bottom 
-                left of the screen and click the Windows logo, or press the Windows 
-                key on your keyboard. This should open a window with a power button 
-                at the bottom right corner. Clicking this will provide several options. 
-                Click the "Restart" button and wait. Alternatively, if this doesn't work, 
-                your device should have a physical power button which you can press and hold 
-                until your device shuts off. For help finding yours, search 
-                "<i>your-device</i> power button". Then just power your device back on!<br><br>
+                    <h2>Linux: </h2>
+                    To reboot on a Linux machine, you can open a terminal window 
+                    and type the command; "reboot". If you can't open a 
+                    terminal window, there should be a physical power key on your 
+                    device which you can press and hold until the device powers off.
+                    For help finding yours, search "<i>your-device</i> power button". If 
+                    you use your physical button, remember to turn the device back on!<br><br>
 
-                <h2>MacOS: </h2>
-                Your Mac device can be rebooted by holding the power button on your 
-                keyboard, pressing "fn" and "f12" then selecting "Shutdown", or clicking 
-                the Apple logo in the top left corner of your screen and select the 
-                "Shut Down..." button. Then turn the device back on with the power button!<br><br>
+                    <h2>Windows: </h2>
+                    To reboot a device running Windows, move your mouse to the bottom 
+                    left of the screen and click the Windows logo, or press the Windows 
+                    key on your keyboard. This should open a window with a power button 
+                    at the bottom right corner. Clicking this will provide several options. 
+                    Click the "Restart" button and wait. Alternatively, if this doesn't work, 
+                    your device should have a physical power button which you can press and hold 
+                    until your device shuts off. For help finding yours, search 
+                    "<i>your-device</i> power button". Then just power your device back on!<br><br>
 
-                <h2>iPhone: </h2>
-                Restarting your iPhone is as simple as pressing and holding the power 
-                button. This should bring a slider up on the top of the screen. Drag 
-                the slider towards the right edge and the phone should power off. Then 
-                hold the power button until the white Apple logo appears. Your phone 
-                should then be powered on!<br><br>
+                    <h2>MacOS: </h2>
+                    Your Mac device can be rebooted by holding the power button on your 
+                    keyboard, pressing "fn" and "f12" then selecting "Shutdown", or clicking 
+                    the Apple logo in the top left corner of your screen and select the 
+                    "Shut Down..." button. Then turn the device back on with the power button!<br><br>
 
-                <h2>iPad: </h2>
-                Force restarting your iPad requires holding one of your two volume buttons 
-                and the power button down and dragging the slider towards the right edge 
-                then, once the device has powered off, holding the power button until it 
-                turns back on. If your iPad has a home button, holding the volume button is 
-                not required.<br><br>
+                    <h2>iPhone: </h2>
+                    Restarting your iPhone is as simple as pressing and holding the power 
+                    button. This should bring a slider up on the top of the screen. Drag 
+                    the slider towards the right edge and the phone should power off. Then 
+                    hold the power button until the white Apple logo appears. Your phone 
+                    should then be powered on!<br><br>
 
-                <h2>Android: </h2>
-                To restart your Android device, hold the power button for 20s until 
-                the screen goes black. Certain devices require your to hold both the 
-                power/side button and the volume down button.<br><br>
-            </div>
+                    <h2>iPad: </h2>
+                    Force restarting your iPad requires holding one of your two volume buttons 
+                    and the power button down and dragging the slider towards the right edge 
+                    then, once the device has powered off, holding the power button until it 
+                    turns back on. If your iPad has a home button, holding the volume button is 
+                    not required.<br><br>
 
-            <div class="clickable-header">
-                <h1 onclick="toggleParagraph('update-everything')"><b>[2]</b> Update <strong>everything</strong></h1>
-            </div>
-            <div id="update-everything" class="hidden-text">
-                Seriously, we mean everything. <strong>EVERYTHING</strong>. Operating 
-                system, software, drivers. For information on how to update these things 
-                search for "<i>your-device</i> update system/software/drivers" and follow 
-                the instructions provided.<br><br>
-            </div>
+                    <h2>Android: </h2>
+                    To restart your Android device, hold the power button for 20s until 
+                    the screen goes black. Certain devices require your to hold both the 
+                    power/side button and the volume down button.<br><br>
+                </div>
+
+                <div class="clickable-header">
+                    <h1 onclick="toggleParagraph('update-everything')"><b>[2]</b> Update <strong>everything</strong></h1>
+                </div>
+                <div id="update-everything" class="hidden-text">
+                    Seriously, we mean everything. <strong>EVERYTHING</strong>. Operating 
+                    system, software, drivers. For information on how to update these things 
+                    search for "<i>your-device</i> update system/software/drivers" and follow 
+                    the instructions provided.<br><br>
+                </div>
 
 
-            <div class="clickable-header">
-                <h1 onclick="toggleParagraph('reinstall-software')"><b>[3]</b> Reinstall the software</h1>
-            </div>
-            <div id="reinstall-software" class="hidden-text">
-                Another step, should a restart or update fail to fix your problem, is reinstalling 
-                whichever software you're having issues with. Of course, if your 
-                operating system is the problem, this won't help but it's a decent 
-                option for simply issues. Certain software comes with a dedicated 
-                uninstall option so, if your uncertain, search for "<i>your-software</i> 
-                uninstall" and follow those instructions.<br>
-            </div>
-            <br>Still broken? Luckily for you, that's where we come in! Click 
-            <a href="index.html">here</a> to go to our home page and schedule a repair.
-        </p>
+                <div class="clickable-header">
+                    <h1 onclick="toggleParagraph('reinstall-software')"><b>[3]</b> Reinstall the software</h1>
+                </div>
+                <div id="reinstall-software" class="hidden-text">
+                    Another step, should a restart or update fail to fix your problem, is reinstalling 
+                    whichever software you're having issues with. Of course, if your 
+                    operating system is the problem, this won't help but it's a decent 
+                    option for simply issues. Certain software comes with a dedicated 
+                    uninstall option so, if your uncertain, search for "<i>your-software</i> 
+                    uninstall" and follow those instructions.<br>
+                </div>
+                <br>Still broken? Luckily for you, that's where we come in! Click 
+                <a href="index.html">here</a> to go to our home page and schedule a repair.
+            </p>
+        </div>
     </div>
 
     <script src="state.js"></script>
