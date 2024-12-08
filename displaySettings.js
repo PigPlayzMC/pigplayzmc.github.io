@@ -61,10 +61,13 @@ catch {
 }
 
 // Button toggle
-document.getElementById('display-toggle').addEventListener('click', function() {
-    const menu = document.getElementById('display-menu');
-    menu.classList.toggle('hidden');
+document.getElementById('display-toggle').addEventListener('click', function () {
+    const displayMenu = document.getElementById('display-menu');
+
+    state.displayMenuOpen = !state.displayMenuOpen;
+    displayMenu.classList.toggle('hidden', !state.displayMenuOpen);
 });
+
 
 // Listen for all font size button clicks
 document.getElementById('small-font').addEventListener('click', function() {

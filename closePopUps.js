@@ -1,27 +1,14 @@
-const menu = document.getElementById('menu');
+document.addEventListener('click', function (event) {
+    const menu = document.getElementById('menu');
+    const displayMenu = document.getElementById('display-menu');
 
-if (menu.classList.contains('hidden')) {
-    // Do nothing. Already hidden
-    } else {
-    // Add a click event listener to the document
-    document.addEventListener('click', function (event) {
-        // Check if the clicked element is outside the target element
-        if (!menu.contains(event.target)) {
-            menu.classList.toggle('hidden');
-        }
-    });
-}
+    if (!menu.contains(event.target) && !event.target.matches('#navigation-toggle')) {
+        menu.classList.add('hidden');
+        state.menuOpen = false;
+    }
 
-const display = document.getElementById('display-menu');
-
-if (display.classList.contains('hidden')) {
-    // Do nothing. Already hidden
-    } else {
-    // Add a click event listener to the document
-    document.addEventListener('click', function (event) {
-        // Check if the clicked element is outside the target element
-        if (!display.contains(event.target)) {
-            display.classList.toggle('hidden');
-        }
-    });
-}
+    if (!displayMenu.contains(event.target) && !event.target.matches('#display-toggle')) {
+        displayMenu.classList.add('hidden');
+        state.displayMenuOpen = false;
+    }
+});
