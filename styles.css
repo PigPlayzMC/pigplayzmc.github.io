@@ -151,6 +151,17 @@
     padding-bottom: 0;
 }
 
+.announcement {
+    font-size: 24px;
+    margin-top: 12vh;
+    margin-inline: auto;
+    background: #FBB933;
+    max-width: 62.5vw;
+    border-radius: 10px;
+    padding: 5px;
+    text-align: center;
+}
+
 /* Houses content and other central elements such as forms */
 .central-bar {
     max-width: 51vw;
