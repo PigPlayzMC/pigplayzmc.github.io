@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="favicon.png" type="image/png">
+
+    <!-- Top Image -->
+    <div class="header-image">
+        <a href="index.html">
+            <img src="Logo-04Trans_NoText_NoEmpty.png" alt="Simplistic black and white logo featuring a computer monitor and phone." class="header-image-2">
+        </a>
+    </div>
+    
+    <title>Westcountry Repairs - FAQs</title>
+
+    <div class="navigation-dropdown">
+        <button id="navigation-toggle" class="navigation-button" aria-label="Toggle navigation">☰</button>
+        <nav id="menu" class="menu hidden">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="aboutus.html">About Us</a></li>
+                <li><a href="troubleshooting.html">Troubleshooting</a></li>
+                <li><a href="faqs.html">FAQs (Here)</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="display-settings">
+        <button id="display-toggle" class="display-button" aria-label="Toggle display settings">*</button>
+    </div>
+
+    <link rel="stylesheet" href="styles.css">
+<body>
+    <body style="background-color:rgb(255, 255, 255);"></body>
+
+    <!-- Banner Section -->
+    <div class="banner">
+        <h1>WESTCOUNTRY REPAIRS</h1>
+        <p>Phones | Computers | Tablets</p>
+        <img> </img>
+    </div>
+
+    <div class="central-bar">
+        <div class="access">
+            <nav id="display-menu" class="menu2 hidden">
+                <!-- Put accessibility settings here -->
+                <h3>Accessibility Settings:</h3>
+                <p>Font size:</p>
+                <button id="small-font" class="accessibility-button">Small</button>
+                <button id="standard-font" class="accessibility-button">Standard</button>
+                <button id="large-font" class="accessibility-button">Large</button>
+                <p>Theme:</p>
+                <button id="light-mode" class="accessibility-button">Light</button>
+                <button id="dark-mode" class="accessibility-button">Dark</button>
+            </nav>
+        </div>
+
+        <div class="content">
+            <p>We understand wanting to know what's going to happen to your 
+                device when we repair it; That's why we made this page!<br>Here 
+                you can get answers to any questions you might have. If you can't find your question, 
+                email <a href="mailto:support@westcountryrepairs.co.uk">support</a> and we'll help you resolve your query.
+
+            <div class="clickable-header">
+                <h1 onclick="toggleParagraph('repair-process')">How does the repair process work?</h1>
+            </div>
+            <div id="repair-process" class="hidden-text">
+                When you submit a request to our form on the <a href="index.html">home</a> page, 
+                we'll email you to get additional information and confirm the needed parts. Then 
+                we order in the parts and arrange a pickup at a time convenient to you. Then comes 
+                the actual repair, which we take care of! Finally, we'll email to confirm a dropoff 
+                time/location and send the invoice.
+            </div>
+
+            <div class="clickable-header">
+                <h1 onclick="toggleParagraph('invoice')"><br>How long do I have to pay my invoice after the repair?</h1>
+            </div>
+            <div id="invoice" class="hidden-text">
+                By default, we send invoices after dropoff with you and you have 30 days to pay. If this doesn't work 
+                for you for whatever reason, we're happy to work something out if you email 
+                <a href="mailto:support@westcountryrepairs.co.uk">support</a> before the 30 day deadline.
+            </div>
+
+			<div class="clickable-header">
+				<h1 onclick="toggleParagraph('devices')"><br>What devices can you repair?</h1>
+			</div>
+			<div id="devices" class="hidden-text">
+				We most frequently repair phones and tablets but we're prepared to repair any 'smart' device
+				from radios to desktop computers!
+			</div>
+
+			<div class="clickable-header">
+				<h1 onclick="toggleParagraph('info')"><br>What information should I provide when submitting a repair?</h1>
+			</div>
+			<div id="info" class="hidden-text">
+                To allow us to repair your device as quickly as possible, you should provide, as a minimum, the model number 
+                (Often found on the bottom or back of the device), device type (e.g. Laptop) and details of the issue(s) 
+				with the device. This isn't an exhaustive list and any extra information is always helpful!
+			</div>
+            </p>
+        </div>
+    </div>
+
+    <!-- Requires: state.js, navigationButton.js, isMobileDevice.js, displaySettings.js, closePopups.js, hideText.js -->
+    <script src="state.js"></script>
+    <script src="navigationButton.js"></script>
+    <script src="isMobileDevice.js"></script>
+    <script src="displaySettings.js"></script>
+    <script src="closePopUps.js"></script>
+    <script src="hideText.js"></script>
+</body>
+</html>
