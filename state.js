@@ -1,4 +1,4 @@
 const state = {
-    menuOpen: false,
-    displayMenuOpen: false,
+	menuOpen: false,
+	displayMenuOpen: false,
 };
