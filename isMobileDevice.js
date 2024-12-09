@@ -20,6 +20,7 @@ const navigationButton = document.querySelector('.navigation-dropdown');
 const accessMenu = document.querySelector('.menu2') // Apologies for the name
 const accessButton = document.querySelector('.display-settings');
 const content = document.querySelector('.content');
+const annBanner = document.querySelector('.announcement');
 
 function mobileFormatting() {
 	//console.log("Determining device type...")
@@ -46,7 +47,7 @@ function mobileFormatting() {
 		} else {
 			headerImage.classList.toggle('hidden');
 		}
-	} else {
+	} else { // Not a mobile device!
 		//console.log("Standard formatting in effect.");
 
 		/* display-settings button formatting (1vw + 48px) */
@@ -55,10 +56,18 @@ function mobileFormatting() {
 		/* Main text formatting */
 		centralBar.style.maxWidth = '51vw';
 		centralBar.style.marginInline = 'auto';
-		centralBar.style.marginTop = '15.5vh';
 		content.style.textAlign = 'left';
 		content.style.setProperty('max-width', '75vw', 'important');
-	
+
+		/* Formatting for central bar based on the state of the announcement banner */
+		if (!annBanner.classList.contains('hidden')) {
+			console.log("Announcement hidden")
+			centralBar.style.marginTop = '15.5vh';
+		} else {
+			console.log("Announcement shown");
+			centralBar.style.marginTop = '1vh';
+		};
+		
 		/* Header logo formatting */
 		headerImage.style.scale = '20%';
 		if (headerImage.classList.contains('hidden')) {
@@ -69,7 +78,7 @@ function mobileFormatting() {
 	// Device wide (But still small)!
 	if (screenHeightLimited()) {
 		/* 
-		This is important because otherwise the banner text extends to far if it is set to 15vh.
+		This is important because otherwise the banner text extends too far if it is set to 15vh.
 		Beyond this point, banner extends for px. Additionally, the banner becomes fixed instead of absolute.*/
 		//console.log("Low device height detected")
 
