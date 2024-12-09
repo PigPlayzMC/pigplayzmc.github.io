@@ -160,6 +160,7 @@
     border-radius: 10px;
     padding: 5px;
     text-align: center;
+    display: none;
 }
 
 /* Houses content and other central elements such as forms */
