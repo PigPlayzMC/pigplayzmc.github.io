@@ -60,7 +60,7 @@ function mobileFormatting() {
 		content.style.setProperty('max-width', '75vw', 'important');
 
 		/* Formatting for central bar based on the state of the announcement banner */
-		if (!annBanner.classList.contains('hidden')) {
+		if (annBanner.style.display == 'none') {
 			console.log("Announcement hidden")
 			centralBar.style.marginTop = '15.5vh';
 		} else {
