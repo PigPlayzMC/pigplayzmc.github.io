@@ -1,1 +1,1 @@
-1. Properly vertically centre logo.
+1. 
