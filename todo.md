@@ -2,6 +2,6 @@
 2. Hide this banner by default [Yay!]
 3. Create JS script to reformat page if the banner is hidden [Yay!]
 3.5 Consider moving this into isMobileDevice.js [Yay!]
-4. !!!Remember to hide this banner by default!!! []
+4. !!!Remember to hide this banner by default!!! [Yay!]
 5. Have single line of code which can be used to toggle banner display [Yay!]
-6. Update isMobileDevice.js to format the new banner for mobile devices []
+6. Update isMobileDevice.js to format the new banner for mobile devices [Yay!]

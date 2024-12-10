@@ -39,6 +39,7 @@ function mobileFormatting() {
 		centralBar.style.marginTop = '17vh';
 		content.style.textAlign = 'center';
 		content.style.setProperty('max-width', '95vw', 'important');
+		annBanner.style.maxWidth = '95vw';
 	
 		/* Header logo formatting */
 		// Hide
@@ -47,6 +48,15 @@ function mobileFormatting() {
 		} else {
 			headerImage.classList.toggle('hidden');
 		}
+
+		/* Formatting for central bar based on the state of the announcement banner */
+		if (annBanner.style.display == 'none') {
+			console.log("Announcement hidden")
+			centralBar.style.marginTop = '15.5vh';
+		} else {
+			console.log("Announcement shown");
+			centralBar.style.marginTop = '1vh';
+		};
 	} else { // Not a mobile device!
 		//console.log("Standard formatting in effect.");
 
@@ -58,6 +68,7 @@ function mobileFormatting() {
 		centralBar.style.marginInline = 'auto';
 		content.style.textAlign = 'left';
 		content.style.setProperty('max-width', '75vw', 'important');
+		annBanner.style.maxWidth = '62.5vw';
 
 		/* Formatting for central bar based on the state of the announcement banner */
 		if (annBanner.style.display == 'none') {
@@ -89,7 +100,7 @@ function mobileFormatting() {
 		accessButton.style.position = 'absolute';
 
 		// Offset element properly
-		content.style.marginTop = '85px';
+		annBanner.style.marginTop = '85px';
 	} else {
 		//console.log("Acceptable device height")
 		// Banner at max 15vh is fine
@@ -98,6 +109,8 @@ function mobileFormatting() {
 		headerImage.style.position = 'fixed';
 		navigationButton.style.position = 'fixed';
 		accessButton.style.position = 'fixed';
+
+		annBanner.style.marginTop = '15vh';
 	};
 
 	if (accessibilityFits()) {
