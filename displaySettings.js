@@ -1,11 +1,15 @@
 function darkmode(darkmodeOn, preloading) {
 	const element = document.querySelector('.central-bar')
+	const content = document.querySelector('.content')
 	if (!darkmodeOn) {
 		console.log("Light mode enabled."); // light
 		element.style.background = "rgba(212, 212, 212, 0.7)"; // Default
+		content.style.color = "#000000";
 	} else {
 		console.log("Dark mode enabled."); // dark
-		element.style.background = "rgba(53, 53, 53, 0.7)"; // Not default
+		element.style.background = "rgba(19, 20, 25, 0.8)"; // Not default
+		//rgba(19, 20, 25, 1) !!This is too extreme!!
+		content.style.color = "#ffffff";
 	}
 
 	// Only sets local theme if its been changed.
