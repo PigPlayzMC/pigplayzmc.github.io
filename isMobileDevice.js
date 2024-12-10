@@ -21,6 +21,7 @@ const accessMenu = document.querySelector('.menu2') // Apologies for the name
 const accessButton = document.querySelector('.display-settings');
 const content = document.querySelector('.content');
 const annBanner = document.querySelector('.announcement');
+const computedStyle = window.getComputedStyle(annBanner);
 
 function mobileFormatting() {
 	//console.log("Determining device type...")
@@ -50,7 +51,7 @@ function mobileFormatting() {
 		}
 
 		/* Formatting for central bar based on the state of the announcement banner */
-		if (annBanner.style.display == 'none') {
+		if (computedStyle.display === 'none') {
 			console.log("Announcement hidden")
 			centralBar.style.marginTop = '15.5vh';
 		} else {
@@ -71,7 +72,7 @@ function mobileFormatting() {
 		annBanner.style.maxWidth = '62.5vw';
 
 		/* Formatting for central bar based on the state of the announcement banner */
-		if (annBanner.style.display == 'none') {
+		if (computedStyle.display === 'none') {
 			console.log("Announcement hidden")
 			centralBar.style.marginTop = '15.5vh';
 		} else {
