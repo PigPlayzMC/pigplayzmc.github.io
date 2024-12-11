@@ -24,7 +24,7 @@ a:visited {
 }
 
 .navigation-dropdown {
-	color: white;
+	color: white !important;
 	position: fixed;
 	top: 1vh;
 	right: 1vw;
