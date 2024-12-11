@@ -1,17 +1,24 @@
 function darkmode(darkmodeOn, preloading) {
-	const element = document.querySelector('.central-bar')
-	const content = document.querySelector('.content')
-	if (!darkmodeOn) {
+	const element = document.querySelector('.central-bar');
+	const content = document.querySelector('.content');
+	const form = document.querySelector('.form-container');
+
+	if (!darkmodeOn) { // LIGHT MODE
 		console.log("Light mode enabled."); // light
 		element.style.background = "rgba(212, 212, 212, 0.7)"; // Default
 		content.style.color = "#000000";
 		updateLinkColors(false);
-	} else {
+
+		form.style.backgroundColor = '#dfdfdf';
+		form.style.color = '#000000';
+	} else { // DARK MODE
 		console.log("Dark mode enabled."); // dark
 		element.style.background = "#060A1D"; // Not default
-		//rgba(19, 20, 25, 1) !!This is too extreme!!
 		content.style.color = "#ffffff";
 		updateLinkColors(true);
+
+		form.style.backgroundColor = '#060A1D'; // Change later
+		form.style.color = '#ffffff';
 	}
 
 	// Only sets local theme if its been changed.
