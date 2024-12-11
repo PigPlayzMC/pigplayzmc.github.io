@@ -33,7 +33,15 @@ a:visited {
 	align-items: flex-end;
 	z-index: 1005;
 }
- 
+
+.navigation-dropdown a:link{
+	color:#FFFFFF !important;
+}
+
+.navigation-dropdown a:visited{
+	color: white !important;
+}
+
 .display-settings {
 	/* Settings for the display settings button */
 	/* 1920 px wide so 1vw = 19.2.
