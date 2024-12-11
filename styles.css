@@ -12,6 +12,17 @@
 	display: none;
 }
 
+/* Links change in dark mode to improve contrast*/
+/* unvisited link */
+a:link {
+	color: blue;
+}
+  
+/* visited link */
+a:visited {
+	color: purple;
+}
+
 .navigation-dropdown {
 	color: white;
 	position: fixed;
