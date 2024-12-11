@@ -8,7 +8,7 @@ function darkmode(darkmodeOn, preloading) {
 		updateLinkColors(false);
 	} else {
 		console.log("Dark mode enabled."); // dark
-		element.style.background = "rgba(19, 20, 25, 0.8)"; // Not default
+		element.style.background = "#060A1D"; // Not default
 		//rgba(19, 20, 25, 1) !!This is too extreme!!
 		content.style.color = "#ffffff";
 		updateLinkColors(true);
@@ -22,28 +22,28 @@ function darkmode(darkmodeOn, preloading) {
 }
 
 function updateLinkColors(isDarkMode) {
-    const styleElementId = 'dynamic-link-styles';
-    let styleElement = document.getElementById(styleElementId);
+	const styleElementId = 'dynamic-link-styles';
+	let styleElement = document.getElementById(styleElementId);
 
-    // Create the <style> element if it doesn't exist
-    if (!styleElement) {
-        styleElement = document.createElement('style');
-        styleElement.id = styleElementId;
-        document.head.appendChild(styleElement);
-    }
+	// Create the <style> element if it doesn't exist
+	if (!styleElement) {
+		styleElement = document.createElement('style');
+		styleElement.id = styleElementId;
+		document.head.appendChild(styleElement);
+	}
 
-    // Update the CSS rules for links
-    if (isDarkMode) { // Dark
-        styleElement.textContent = `
-            a:link { color: hotpink !important; }       /* Unvisited links */
-            a:visited { color: pink !important; }   /* Visited links */
-        `;
-    } else { // Light
-        styleElement.textContent = `
-            a:link { color: blue !important; }       /* Unvisited links */
-            a:visited { color: purple !important; }   /* Visited links */
-        `;
-    }
+	// Update the CSS rules for links
+	if (isDarkMode) { // Dark
+		styleElement.textContent = `
+			a:link { color: hotpink !important; }       /* Unvisited links */
+			a:visited { color: pink !important; }   /* Visited links */
+		`;
+	} else { // Light
+		styleElement.textContent = `
+			a:link { color: blue !important; }       /* Unvisited links */
+			a:visited { color: purple !important; }   /* Visited links */
+		`;
+	}
 }
 
 function fontSize(size, preloading) {
