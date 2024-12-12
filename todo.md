@@ -1,5 +1,5 @@
 1. Do CSS link styling for links in dark mode for links [Yay!]
 	1. Alter the a:link and a:visited with displaySettings.js [Yay!]
 2. Navigation link button formatting [Yay!]
-3. Form container colour changes []
+3. Form container colour changes [Yay!]
 4. Updates theme based on device settings by default []
