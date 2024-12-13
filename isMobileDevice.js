@@ -22,12 +22,11 @@ const accessButton = document.querySelector('.display-settings');
 const content = document.querySelector('.content');
 const annBanner = document.querySelector('.announcement');
 const computedStyle = window.getComputedStyle(annBanner);
+const consent = document.querySelector('.consent');
 
 function mobileFormatting() {
 	//console.log("Determining device type...")
 	
-	
-
 	// Phone in portrait mode!
 	if (isMobileDevice()) {
 		//console.log("Mobile formatting in effect.");
@@ -92,7 +91,7 @@ function mobileFormatting() {
 		/* 
 		This is important because otherwise the banner text extends too far if it is set to 15vh.
 		Beyond this point, banner extends for px. Additionally, the banner becomes fixed instead of absolute.*/
-		//console.log("Low device height detected")
+		console.log("Low device height detected")
 
 		banner.style.maxHeight = '81px'; // Big enough that the banner text still fits.
 		banner.style.position = 'absolute';
@@ -102,6 +101,15 @@ function mobileFormatting() {
 
 		// Offset element properly
 		annBanner.style.marginTop = '85px';
+
+		/* Formatting for central bar based on the state of the announcement banner */
+		if (computedStyle.display === 'none') {
+			console.log("Announcement hidden")
+			centralBar.style.marginTop = '85px';
+		} else {
+			console.log("Announcement shown");
+			centralBar.style.marginTop = '1vh';
+		};
 	} else {
 		//console.log("Acceptable device height")
 		// Banner at max 15vh is fine

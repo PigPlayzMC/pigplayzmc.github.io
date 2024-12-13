@@ -83,7 +83,7 @@ function noConsent() { // Triggers when local storage cannot load.
 	darkmode(false, true);
 
 	// Show consent popup
-	const consentPopup = document.querySelector('.consent')
+	const consentPopup = document.querySelector('.consent');
 	consentPopup.classList.toggle('hidden');
 
 	const allow = document.querySelector('.allow');

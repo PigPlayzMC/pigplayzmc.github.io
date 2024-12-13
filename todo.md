@@ -3,4 +3,5 @@
 2. Navigation link button formatting [Yay!]
 3. Form container colour changes [Yay!]
 4. Consent for local storage [Yay!]
+	1. Mobile formatting
 5. Updates theme based on device settings by default []
