@@ -357,6 +357,13 @@ button:hover {
 	border-radius: 2px;
 }
 
+.accessibility-button-red {
+	text-align: left;
+	border-radius: 2px;
+	background-color: red;
+	text-align: center;
+}
+
 .consent {
 	z-index: 10000;
 	text-align: center;

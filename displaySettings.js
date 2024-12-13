@@ -170,3 +170,10 @@ document.getElementById('light-mode').addEventListener('click', function() {
 document.getElementById('dark-mode').addEventListener('click', function() {
 	darkmode(true, false);
 });
+
+// Listen for clear local storage clicks
+document.getElementById('clear-settings').addEventListener('click', function() {
+	localStorage.clear();
+	console.log("Reloading site...");
+	location.reload();
+});
