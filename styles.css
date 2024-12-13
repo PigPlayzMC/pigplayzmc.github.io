@@ -12,8 +12,19 @@
 	display: none;
 }
 
+/* Links change in dark mode to improve contrast*/
+/* unvisited link */
+a:link {
+	color: blue;
+}
+  
+/* visited link */
+a:visited {
+	color: purple;
+}
+
 .navigation-dropdown {
-	color: white;
+	color: white !important;
 	position: fixed;
 	top: 1vh;
 	right: 1vw;
@@ -22,7 +33,15 @@
 	align-items: flex-end;
 	z-index: 1005;
 }
- 
+
+.navigation-dropdown a:link{
+	color:#FFFFFF !important;
+}
+
+.navigation-dropdown a:visited{
+	color: white !important;
+}
+
 .display-settings {
 	/* Settings for the display settings button */
 	/* 1920 px wide so 1vw = 19.2.
@@ -186,6 +205,7 @@
 	margin: 10px;
 	max-width: 75vw !important;
 	padding-top: 10px;
+	color: #000000;
 }
 
 .form-container {
@@ -196,7 +216,8 @@
 
 	background-color: #dfdfdf;
 	padding: 20px 0px;
-	border-radius: 8px;
+	border-radius: 5px;
+	border-style: groove;
 	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 	width: 100%;
 	max-width: 600px;
@@ -205,7 +226,6 @@
 
 form h2 {
 	margin-bottom: 15px;
-	color: #000000;
 	text-align: center;
 }
 
@@ -217,7 +237,6 @@ form p {
 label {
 	display: block;
 	margin-bottom: 5px;
-	color: #000000;
 	font-weight: bold;
 	padding-left: 1.5vw;
 }
@@ -288,6 +307,7 @@ button:hover {
 	transform: translate(-50%, -50%);
 	display: block;
 	padding: 20px;
+	z-index: 1005;
 }
 
 .access div {
@@ -337,4 +357,37 @@ button:hover {
 .accessibility-button {
 	text-align: left;
 	border-radius: 2px;
+}
+
+.accessibility-button-red {
+	text-align: left;
+	border-radius: 2px;
+	background-color: red;
+	text-align: center;
+}
+
+.consent {
+	z-index: 10000;
+	text-align: center;
+	margin: 10px;
+	padding: 5px;
+	background-color: #ffffff;
+	border-color: #000000;
+	border-width: 2px;
+	border-radius: 2px;
+	border-style: groove;
+	max-width: 400px;
+	margin-inline: auto;
+}
+
+.allow {
+	border-radius: 2px;
+	background-color: #4CAF50;
+	max-width: 100px;
+}
+
+.deny { /* Defend Depose */
+	border-radius: 2px;
+	background-color: red;
+	max-width: 100px;
 }
