@@ -2,4 +2,5 @@
 	1. Alter the a:link and a:visited with displaySettings.js [Yay!]
 2. Navigation link button formatting [Yay!]
 3. Form container colour changes [Yay!]
-4. Updates theme based on device settings by default []
+4. Consent for local storage [Yay!]
+5. Updates theme based on device settings by default []
