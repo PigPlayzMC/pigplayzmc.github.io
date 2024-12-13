@@ -216,7 +216,8 @@ a:visited {
 
 	background-color: #dfdfdf;
 	padding: 20px 0px;
-	border-radius: 8px;
+	border-radius: 5px;
+	border-style: groove;
 	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 	width: 100%;
 	max-width: 600px;
@@ -385,7 +386,7 @@ button:hover {
 	max-width: 100px;
 }
 
-.deny {
+.deny { /* Defend Depose */
 	border-radius: 2px;
 	background-color: red;
 	max-width: 100px;

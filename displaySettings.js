@@ -17,7 +17,7 @@ function darkmode(darkmodeOn, preloading) {
 		content.style.color = "#ffffff";
 		updateLinkColors(true);
 
-		form.style.backgroundColor = '#060A1D'; // Change later
+		form.style.backgroundColor = '#131417'; // Change later
 		form.style.color = '#ffffff';
 	}
 
