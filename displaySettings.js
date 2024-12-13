@@ -97,6 +97,7 @@ function noConsent() { // Triggers when local storage cannot load.
 	deny.addEventListener('click', function() { // No consent given
 		consentPopup.classList.toggle('hidden');
 		console.log("Consent denied. :(")
+		localStorage.clear();
 	})
 }
 
