@@ -7,4 +7,4 @@
 5. Updates theme based on device settings [Yay!]
 	1. Allow for device default selection [Yay!]
 	2. Update this for the site localStorage when loading [Yay!]
-6. Different colour for form container in dark mode (Slightly lighter) []
+6. Different colour for form container in dark mode (Slightly lighter) [Yay!]
