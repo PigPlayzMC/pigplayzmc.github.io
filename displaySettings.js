@@ -30,6 +30,23 @@ function darkmode(darkmodeOn, preloading) {
 	}
 }
 
+ // Function to determine device default theme
+ function applyDeviceDefaultTheme() {
+	try {
+		// Check if the user's device is in dark mode
+		const prefersDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+		// Set deviceDefault based on the preference
+		const deviceDefault = prefersDarkMode ? 'dark' : 'light';
+
+		// Call the darkmode function with deviceDefault and true
+		darkmode(deviceDefault, true);
+	}
+	catch {
+		darkmode(false, true);
+	}
+}
+
 function updateLinkColors(isDarkMode) {
 	const styleElementId = 'dynamic-link-styles';
 	let styleElement = document.getElementById(styleElementId);
@@ -130,10 +147,14 @@ try {
 		}
 
 		try {
-			darkmode(localStorage.getItem("Theme") === "true", true);
+			if (localStorage.getItem("Theme") === "true" || localStorage.getItem("Theme") === "false") {
+				darkmode(localStorage.getItem("Theme") === "true", true);
+			} else {
+				applyDeviceDefaultTheme();
+			}
 		}
 		catch {
-			console.log("No previous theme settings found")
+			console.log("No previous theme settings found.")
 			darkmode(false, true);
 		}
 	} else { // Needed only for users who return from before consent implemented!
@@ -171,6 +192,11 @@ document.getElementById('light-mode').addEventListener('click', function() {
 document.getElementById('dark-mode').addEventListener('click', function() {
 	darkmode(true, false);
 });
+document.getElementById('device-default').addEventListener('click', function() {
+	applyDeviceDefaultTheme();
+	localStorage.setItem("Theme", "device");
+	console.log("New theme formatting saving...");
+})
 
 // Listen for clear local storage clicks
 document.getElementById('clear-settings').addEventListener('click', function() {

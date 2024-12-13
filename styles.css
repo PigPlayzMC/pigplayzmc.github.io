@@ -306,6 +306,7 @@ button:hover {
 	transform: translate(-50%, -50%);
 	display: block;
 	padding: 20px;
+	z-index: 1005;
 }
 
 .access div {
