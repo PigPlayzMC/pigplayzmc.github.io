@@ -4,6 +4,6 @@
 3. Form container colour changes [Yay!]
 4. Consent for local storage [Yay!]
 	1. Mobile formatting [Yay!]
-5. Updates theme based on device settings by default []
-	1. Allow for device default selection []
+5. Updates theme based on device settings [Yay!]
+	1. Allow for device default selection [Yay!]
 	2. Update this for the site localStorage when loading [Yay!]
