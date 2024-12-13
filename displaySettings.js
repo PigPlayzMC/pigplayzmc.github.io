@@ -21,10 +21,12 @@ function darkmode(darkmodeOn, preloading) {
 		form.style.color = '#ffffff';
 	}
 
-	// Only sets local theme if its been changed.
-	if (!preloading) {
-		localStorage.setItem("Theme", darkmodeOn);
-		console.log("New theme formatting saving...");
+	// Only sets local theme if its been changed and consent has been given.
+	if (findConsent) {
+		if (!preloading) {
+			localStorage.setItem("Theme", darkmodeOn);
+			console.log("New theme formatting saving...");
+		}
 	}
 }
 
@@ -66,36 +68,79 @@ function fontSize(size, preloading) {
 		element.style.fontSize = "24px";
 	}
 	
-	// Only sets local theme if its been changed.
-	if (!preloading) {
-		localStorage.setItem("Size", size);
-		console.log("New font size formatting saving...");
+	// Only sets local theme if its been changed and consent has been given.
+	if (findConsent) {
+		if (!preloading) {
+			localStorage.setItem("Size", size);
+			console.log("New font size formatting saving...");
+		}
 	}
 }
 
-function spaces(spacing) {
-	if (spacing == 0) {
-		console.log("Standard spacing selected.") // 1
-	} else {
-		console.log("Wide spacing selected.") // 1.5
-	}
-}
-
-// Initialise with correct formatting
-try {
-	fontSize(localStorage.getItem("Size"), true);
-	}
-catch {
-	console.log("No previous font size settings found");
+function noConsent() { // Triggers when local storage cannot load.
+	console.log("No consent given. Default settings enabling...")
 	fontSize(1, false);
+	darkmode(false, true);
+
+	// Show consent popup
+	const consentPopup = document.querySelector('.consent')
+	consentPopup.classList.toggle('hidden');
+
+	const allow = document.querySelector('.allow');
+	const deny = document.querySelector('.deny');
+
+	allow.addEventListener('click', function() { // Local storage can be used
+		localStorage.setItem("Consent", true);
+		consentPopup.classList.toggle('hidden');
+		console.log("Consent given!")
+	})
+	deny.addEventListener('click', function() { // No consent given
+		consentPopup.classList.toggle('hidden');
+		console.log("Consent denied. :(")
+	})
+}
+
+function findConsent() {
+	try {
+		if (localStorage.getItem("Consent") === "true") {
+			console.log("Saving settings authorised!")
+			return true;
+		} else {
+			return false;
+		}
+	}
+	catch {
+		return false;
+	}
 }
 
 try {
-	darkmode(localStorage.getItem("Theme") === "true", true);
+	const consent = localStorage.getItem("Consent");
+	if (consent === "true") {
+		console.log("Consent to use local storage found!")
+
+		// Initialise with correct formatting
+		try {
+			fontSize(localStorage.getItem("Size"), true);
+			}
+		catch {
+			console.log("No previous font size settings found");
+			fontSize(1, false);
+		}
+
+		try {
+			darkmode(localStorage.getItem("Theme") === "true", true);
+		}
+		catch {
+			console.log("No previous theme settings found")
+			darkmode(false, true);
+		}
+	} else { // Needed only for users who return from before consent implemented!
+		noConsent();
+	}
 }
 catch {
-	console.log("No previous theme settings found")
-	darkmode(false, true);
+	noConsent();
 }
 
 // Button toggle
