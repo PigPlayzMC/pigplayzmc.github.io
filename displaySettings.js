@@ -9,16 +9,24 @@ function darkmode(darkmodeOn, preloading) {
 		content.style.color = "#000000";
 		updateLinkColors(false);
 
-		form.style.backgroundColor = '#dfdfdf';
-		form.style.color = '#000000';
+		try {
+			form.style.backgroundColor = '#dfdfdf';
+			form.style.color = '#000000';
+		} catch {
+			// No form exists so don't bother!
+		}
 	} else { // DARK MODE
 		console.log("Dark mode enabled."); // dark
 		element.style.background = "#060A1D"; // Not default
 		content.style.color = "#ffffff";
 		updateLinkColors(true);
 
-		form.style.backgroundColor = '#131417'; // Change later
-		form.style.color = '#ffffff';
+		try {
+			form.style.backgroundColor = '#131417'; // Change later
+			form.style.color = '#ffffff';
+		} catch {
+			// No form
+		}
 	}
 
 	// Only sets local theme if its been changed and consent has been given.
