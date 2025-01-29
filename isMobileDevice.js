@@ -21,7 +21,6 @@ const accessMenu = document.querySelector('.menu2') // Apologies for the name
 const accessButton = document.querySelector('.display-settings');
 const content = document.querySelector('.content');
 const annBanner = document.querySelector('.announcement');
-const computedStyle = window.getComputedStyle('.annBanner');
 const consent = document.querySelector('.consent');
 
 function mobileFormatting() {
