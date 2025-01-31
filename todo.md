@@ -2,5 +2,5 @@
 |        |            |            |            |
 
 - Add pricing and terms to nav bar
-- Stop size saving despite lack of consent
-- Possible issue with button sizing!!! (;-; Though that issue was fixed?)
+- Stop size saving despite lack of consent [fixed]
+- Possible issue with button sizing!!! (;-; Though that issue was fixed?) [fixed]
