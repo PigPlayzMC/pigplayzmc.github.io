@@ -20,7 +20,7 @@ const navigationButton = document.querySelector('.navigation-dropdown');
 const accessMenu = document.querySelector('.menu2') // Apologies for the name
 const accessButton = document.querySelector('.display-settings');
 const content = document.querySelector('.content');
-const annBanner = document.querySelector('.announcement'); // Will be null if not present on page (Not index.html)
+const annBanner = document.querySelector('.announcement'); // Will be null if not present on page
 const consent = document.querySelector('.consent');
 
 function mobileFormatting() {
@@ -52,7 +52,7 @@ function mobileFormatting() {
 
 		/* Formatting for central bar based on the state of the announcement banner */
 		if (annBanner !== null) {
-			if (annBanner.display === 'none') {
+			if (window.getComputedStyle(annBanner).display === 'none') {
 				console.log("Announcement hidden")
 				centralBar.style.marginTop = '15.5vh';
 			} else {
@@ -77,7 +77,7 @@ function mobileFormatting() {
 
 		/* Formatting for central bar based on the state of the announcement banner */
 		if (annBanner !== null) {
-			if (annBanner.display === 'none') {
+			if (window.getComputedStyle(annBanner).display === 'none') {
 				console.log("Announcement hidden")
 				centralBar.style.marginTop = '15.5vh';
 			} else {
@@ -113,7 +113,7 @@ function mobileFormatting() {
 
 		/* Formatting for central bar based on the state of the announcement banner */
 		if (annBanner !== null) {
-			if (annBanner.display === 'none') {
+			if (window.getComputedStyle(annBanner).display === 'none') {
 				console.log("Announcement hidden")
 				centralBar.style.marginTop = '85px';
 			} else {
