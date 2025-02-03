@@ -52,7 +52,7 @@ function mobileFormatting() {
 
 		/* Formatting for central bar based on the state of the announcement banner */
 		if (annBanner !== null) {
-			if (annBanner.display === 'none') {
+			if (window.getComputedStyle(annBanner).display === 'none') {
 				console.log("Announcement hidden")
 				centralBar.style.marginTop = '15.5vh';
 			} else {
@@ -77,7 +77,7 @@ function mobileFormatting() {
 
 		/* Formatting for central bar based on the state of the announcement banner */
 		if (annBanner !== null) {
-			if (annBanner.display === 'none') {
+			if (window.getComputedStyle(annBanner).display === 'none') {
 				console.log("Announcement hidden")
 				centralBar.style.marginTop = '15.5vh';
 			} else {
@@ -113,7 +113,7 @@ function mobileFormatting() {
 
 		/* Formatting for central bar based on the state of the announcement banner */
 		if (annBanner !== null) {
-			if (annBanner.display === 'none') {
+			if (window.getComputedStyle(annBanner).display === 'none') {
 				console.log("Announcement hidden")
 				centralBar.style.marginTop = '85px';
 			} else {

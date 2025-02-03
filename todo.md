@@ -16,3 +16,6 @@ Issue with announcement banner
 ## Cause ##
 - Issue with formatting when announcement is hidden?
 - isMobileDevice.js
+- Erronious 'announcement shown' message in console
+- annBanner.display is undefined
+- annBanner.style.display = *<empty string>*
