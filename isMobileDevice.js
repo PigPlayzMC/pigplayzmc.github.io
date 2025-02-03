@@ -20,8 +20,7 @@ const navigationButton = document.querySelector('.navigation-dropdown');
 const accessMenu = document.querySelector('.menu2') // Apologies for the name
 const accessButton = document.querySelector('.display-settings');
 const content = document.querySelector('.content');
-const annBanner = document.querySelector('.announcement');
-const computedStyle = window.getComputedStyle(annBanner);
+const annBanner = document.querySelector('.announcement'); // Will be null if not present on page (Not index.html)
 const consent = document.querySelector('.consent');
 
 function mobileFormatting() {
@@ -39,7 +38,9 @@ function mobileFormatting() {
 		centralBar.style.marginTop = '17vh';
 		content.style.textAlign = 'center';
 		content.style.setProperty('max-width', '95vw', 'important');
-		annBanner.style.maxWidth = '95vw';
+		if (annBanner !== null) {
+			annBanner.style.maxWidth = '95vw';
+		}
 	
 		/* Header logo formatting */
 		// Hide
@@ -50,13 +51,15 @@ function mobileFormatting() {
 		}
 
 		/* Formatting for central bar based on the state of the announcement banner */
-		if (computedStyle.display === 'none') {
-			console.log("Announcement hidden")
-			centralBar.style.marginTop = '15.5vh';
-		} else {
-			console.log("Announcement shown");
-			centralBar.style.marginTop = '1vh';
-		};
+		if (annBanner !== null) {
+			if (annBanner.display === 'none') {
+				console.log("Announcement hidden")
+				centralBar.style.marginTop = '15.5vh';
+			} else {
+				console.log("Announcement shown");
+				centralBar.style.marginTop = '1vh';
+			};
+		}
 	} else { // Not a mobile device!
 		//console.log("Standard formatting in effect.");
 
@@ -68,17 +71,21 @@ function mobileFormatting() {
 		centralBar.style.marginInline = 'auto';
 		content.style.textAlign = 'left';
 		content.style.setProperty('max-width', '75vw', 'important');
-		annBanner.style.maxWidth = '62.5vw';
+		if (annBanner !== null) {
+			annBanner.style.maxWidth = '62.5vw';
+		}
 
 		/* Formatting for central bar based on the state of the announcement banner */
-		if (computedStyle.display === 'none') {
-			console.log("Announcement hidden")
-			centralBar.style.marginTop = '15.5vh';
-		} else {
-			console.log("Announcement shown");
-			centralBar.style.marginTop = '1vh';
-		};
-		
+		if (annBanner !== null) {
+			if (annBanner.display === 'none') {
+				console.log("Announcement hidden")
+				centralBar.style.marginTop = '15.5vh';
+			} else {
+				console.log("Announcement shown");
+				centralBar.style.marginTop = '1vh';
+			};
+		}
+
 		/* Header logo formatting */
 		headerImage.style.scale = '20%';
 		if (headerImage.classList.contains('hidden')) {
@@ -100,16 +107,20 @@ function mobileFormatting() {
 		accessButton.style.position = 'absolute';
 
 		// Offset element properly
-		annBanner.style.marginTop = '85px';
+		if (annBanner !== null) {
+			annBanner.style.marginTop = '85px';
+		}
 
 		/* Formatting for central bar based on the state of the announcement banner */
-		if (computedStyle.display === 'none') {
-			console.log("Announcement hidden")
-			centralBar.style.marginTop = '85px';
-		} else {
-			console.log("Announcement shown");
-			centralBar.style.marginTop = '1vh';
-		};
+		if (annBanner !== null) {
+			if (annBanner.display === 'none') {
+				console.log("Announcement hidden")
+				centralBar.style.marginTop = '85px';
+			} else {
+				console.log("Announcement shown");
+				centralBar.style.marginTop = '1vh';
+			};
+		}
 	} else {
 		//console.log("Acceptable device height")
 		// Banner at max 15vh is fine
@@ -119,7 +130,9 @@ function mobileFormatting() {
 		navigationButton.style.position = 'fixed';
 		accessButton.style.position = 'fixed';
 
-		annBanner.style.marginTop = '15vh';
+		if (annBanner !== null) {
+			annBanner.style.marginTop = '15vh';
+		}
 	};
 
 	if (accessibilityFits()) {

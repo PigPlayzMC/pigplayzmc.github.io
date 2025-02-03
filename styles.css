@@ -312,6 +312,7 @@ button:hover {
 
 .access div {
 	/* Can't remember if this bit is important so better just leave it for now! :) */
+	/* Correction: This will never be removed */
 	width: auto;
 	padding: 20px;
 }
@@ -390,4 +391,20 @@ button:hover {
 	border-radius: 2px;
 	background-color: red;
 	max-width: 100px;
+}
+
+table {
+	font-family: arial, sans-serif;
+	border-collapse: collapse;
+	width: 100%;
+}
+
+td, th {
+	border: 1px solid #000000;
+	text-align: left;
+	padding: 8px;
+}
+
+td:empty {
+	background: #7e7e7e;
 }

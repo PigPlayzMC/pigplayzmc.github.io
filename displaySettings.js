@@ -30,7 +30,7 @@ function darkmode(darkmodeOn, preloading) {
 	}
 
 	// Only sets local theme if its been changed and consent has been given.
-	if (findConsent) {
+	if (findConsent()) {
 		if (!preloading) {
 			localStorage.setItem("Theme", darkmodeOn);
 			console.log("New theme formatting saving...");
@@ -94,7 +94,7 @@ function fontSize(size, preloading) {
 	}
 	
 	// Only sets local theme if its been changed and consent has been given.
-	if (findConsent) {
+	if (findConsent()) {
 		if (!preloading) {
 			localStorage.setItem("Size", size);
 			console.log("New font size formatting saving...");
@@ -127,15 +127,18 @@ function noConsent() { // Triggers when local storage cannot load.
 }
 
 function findConsent() {
+	console.log("Checking for consent...")
 	try {
 		if (localStorage.getItem("Consent") === "true") {
 			console.log("Saving settings authorised!")
 			return true;
 		} else {
+			console.log("No consent found.")
 			return false;
 		}
 	}
 	catch {
+		console.log("No consent found.")
 		return false;
 	}
 }
