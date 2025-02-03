@@ -20,7 +20,7 @@ const navigationButton = document.querySelector('.navigation-dropdown');
 const accessMenu = document.querySelector('.menu2') // Apologies for the name
 const accessButton = document.querySelector('.display-settings');
 const content = document.querySelector('.content');
-const annBanner = document.querySelector('.announcement'); // Will be null if not present on page (Not index.html)
+const annBanner = document.querySelector('.announcement'); // Will be null if not present on page
 const consent = document.querySelector('.consent');
 
 function mobileFormatting() {
