@@ -190,6 +190,7 @@ a:visited {
 	margin-top: 15.5vh; /* Adjust based on the height of the banner */
 	border-radius: 10px;
 	padding-bottom: 4px;
+	margin-bottom: 5vh;
 }
 
 /* Push main content below the banner */
