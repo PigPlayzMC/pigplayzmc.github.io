@@ -282,6 +282,9 @@ button:hover {
 	float: right;
 	margin-left: 20px; /* Optional: adds spacing to the left */
 	text-align: center;
+	right: 10vw;
+	bottom: 15vh;
+	position: sticky;
 }
 
 #restart-computer {
