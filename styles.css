@@ -190,6 +190,7 @@ a:visited {
 	margin-top: 15.5vh; /* Adjust based on the height of the banner */
 	border-radius: 10px;
 	padding-bottom: 4px;
+	margin-bottom: 5vh;
 }
 
 /* Push main content below the banner */
@@ -281,6 +282,9 @@ button:hover {
 	float: right;
 	margin-left: 20px; /* Optional: adds spacing to the left */
 	text-align: center;
+	right: 10vw;
+	bottom: 15vh;
+	position: sticky;
 }
 
 #restart-computer {
