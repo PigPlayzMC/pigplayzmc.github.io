@@ -278,13 +278,15 @@ button:hover {
 	background-color: #3c3c3c;
 }
 
+.trustbox-enclosure {
+	position: fixed;
+	right: calc(-4vw);
+	top: 85vh;
+}
+
 .trustpilot-widget {
 	float: right;
-	margin-left: 20px; /* Optional: adds spacing to the left */
 	text-align: center;
-	right: 10vw;
-	bottom: 15vh;
-	position: sticky;
 }
 
 #restart-computer {
