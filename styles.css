@@ -280,12 +280,12 @@ button:hover {
 
 .trustbox-enclosure {
 	position: fixed;
-	right: calc(-4vw);
+	right: 0vw; 
 	top: 85vh;
 }
 
 .trustpilot-widget {
-	float: right;
+	float: none;
 	text-align: center;
 }
 
